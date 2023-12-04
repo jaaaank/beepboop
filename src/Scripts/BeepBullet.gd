@@ -14,3 +14,4 @@ func _on_Bullet_body_entered(body):
 func _on_Bullet_area_entered(area):
 	if area.get_collision_layer_bit(2):
 		area.owner.call("damage", 10)
+		queue_free()

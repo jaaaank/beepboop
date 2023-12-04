@@ -51,9 +51,9 @@ func calculate_move_velocity(
 		out.y = 0.0
 	return out
 
-func damage() -> void:
+func damage():
 	health -=1
-	AudioHurt.play()
+	print("beepdamaged")
 	if health <= 0:
 		die()
 	
@@ -83,6 +83,4 @@ func switchMode(newMode):
 	print(mode)
 	
 func die() -> void:
-	AudioDeath.play()
-	AnimP.play("death")
 	queue_free()

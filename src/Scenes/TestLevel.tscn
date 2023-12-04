@@ -1,12 +1,22 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/Actors/BeepBoop.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/ModeSwitcher.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Actors/enemies/WalkingEnemy.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 548.5, 10 )
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 103 )
+
 [node name="TestLevel" type="Node2D"]
+
+[node name="WalkingEnemy2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -497, -77 )
+
+[node name="ModeSwitcher" parent="." instance=ExtResource( 2 )]
+position = Vector2( 334, -17 )
 
 [node name="BeepBoop" parent="." instance=ExtResource( 1 )]
 position = Vector2( -1, -102 )
@@ -19,5 +29,23 @@ collision_mask = 31
 position = Vector2( -27.5, 0 )
 shape = SubResource( 1 )
 
-[node name="ModeSwitcher" parent="FloorTest/CollisionShape2D" instance=ExtResource( 2 )]
-position = Vector2( 361.5, -17 )
+[node name="FloorTest2" type="KinematicBody2D" parent="."]
+position = Vector2( -516, 94 )
+collision_layer = 16
+collision_mask = 31
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorTest2"]
+position = Vector2( -27.5, -93 )
+shape = SubResource( 2 )
+
+[node name="FloorTest3" type="KinematicBody2D" parent="."]
+position = Vector2( 541, 98 )
+collision_layer = 16
+collision_mask = 31
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorTest3"]
+position = Vector2( -27.5, -93 )
+shape = SubResource( 2 )
+
+[node name="WalkingEnemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( -160, -57 )
