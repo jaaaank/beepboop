@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/Scripts/LookatPlayer.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Art/gun.png" type="Texture" id=2]
 [ext_resource path="res://src/Actors/enemies/EnemyBullet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Scripts/Turret.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -10,6 +11,9 @@
 extents = Vector2( 9, 9.5 )
 
 [node name="Turret" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 27
+script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
