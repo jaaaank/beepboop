@@ -20,7 +20,6 @@ func _physics_process(delta: float) -> void:
 func _on_hitbox_body_entered(body):
 	if body.get_collision_layer_bit(0):
 		body.call("damage")
-		print(("damaged player"))
 
 func damage(dmg):
 	health -= dmg

@@ -8,6 +8,8 @@ var player
 func _input(event):
 	if Input.is_action_just_pressed("1") and canswitch:
 		player.call("switchMode",1)
+	if Input.is_action_just_pressed("2") and canswitch:
+		player.call("switchMode",2)
 	elif Input.is_action_just_pressed("3") and canswitch:
 		player.call("switchMode",3)
 

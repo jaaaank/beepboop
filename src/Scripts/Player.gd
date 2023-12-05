@@ -63,20 +63,21 @@ func switchMode(newMode):
 		0:
 			pass # normal mode
 		1:
-			speed = Vector2(400, 900)
+			speed = Vector2(400, 1000)
 			print("jump mode")
 		2:
-			pass # defense mode
-			print("defense mode")
+			pass # run mode
+			speed = Vector2(700,600)
+			print("run mode")
 		3: 
 			pass # attack mode
 			$GUN.visible = true
 			print("attack mode")
 		4: 
 			pass # BIGMODE
-	if mode !=1:
+	if mode !=1 and mode !=2:
 		speed = Vector2(350,700)
-		print("not jump mode")
+		print("not jump or run mode")
 	elif mode !=3:
 		$GUN.visible = false
 		print("not attack mode")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/Actors/BeepBoop.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/ModeSwitcher.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Actors/enemies/Turret.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Actors/enemies/WalkingEnemy.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -29,6 +30,16 @@ collision_mask = 31
 position = Vector2( -27.5, 0 )
 shape = SubResource( 1 )
 
+[node name="FloorTest4" type="KinematicBody2D" parent="."]
+position = Vector2( 721, -441 )
+rotation = 2.1168
+collision_layer = 16
+collision_mask = 31
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorTest4"]
+position = Vector2( -27.5, 0 )
+shape = SubResource( 1 )
+
 [node name="FloorTest2" type="KinematicBody2D" parent="."]
 position = Vector2( -516, 94 )
 collision_layer = 16
@@ -47,5 +58,12 @@ collision_mask = 31
 position = Vector2( -27.5, -93 )
 shape = SubResource( 2 )
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="FloorTest3"]
+position = Vector2( -633, -57 )
+shape = SubResource( 2 )
+
 [node name="WalkingEnemy" parent="." instance=ExtResource( 4 )]
 position = Vector2( -160, -57 )
+
+[node name="Turret" parent="." instance=ExtResource( 3 )]
+position = Vector2( 176, -61 )
