@@ -1,7 +1,7 @@
 extends Node2D
 
 
-onready var player = owner.owner.get_node("BeepBoop")
+onready var player = get_tree().root.get_node("TestLevel/BeepBoop")
 export (PackedScene) var bullet
 onready var gun = $Sprite
 var cooldown: bool = false
@@ -15,7 +15,7 @@ func _process(delta):
 	
 func fireBullet():
 	var b = bullet.instance()
-	get_parent().get_parent().add_child(b)
+	get_tree().root.add_child(b)
 	b.position = global_position
 	b.scale = scale
 	b.rotation_degrees = rotation_degrees

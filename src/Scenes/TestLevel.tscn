@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/Actors/BeepBoop.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/ModeSwitcher.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Actors/enemies/Turret.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Actors/enemies/WalkingEnemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Actors/enemies/FlyingTurretEnemy.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 548.5, 10 )
@@ -13,14 +14,15 @@ extents = Vector2( 10, 103 )
 
 [node name="TestLevel" type="Node2D"]
 
+[node name="BeepBoop" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1, -102 )
+health = 100.0
+
 [node name="WalkingEnemy2" parent="." instance=ExtResource( 4 )]
 position = Vector2( -497, -77 )
 
 [node name="ModeSwitcher" parent="." instance=ExtResource( 2 )]
 position = Vector2( 334, -17 )
-
-[node name="BeepBoop" parent="." instance=ExtResource( 1 )]
-position = Vector2( -1, -102 )
 
 [node name="FloorTest" type="KinematicBody2D" parent="."]
 collision_layer = 16
@@ -67,3 +69,9 @@ position = Vector2( -160, -57 )
 
 [node name="Turret" parent="." instance=ExtResource( 3 )]
 position = Vector2( 176, -61 )
+
+[node name="FlyingTurretEnemy" parent="." instance=ExtResource( 5 )]
+position = Vector2( 180, -194 )
+
+[editable path="FlyingTurretEnemy"]
+[editable path="FlyingTurretEnemy/Turret"]
