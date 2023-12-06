@@ -16,7 +16,6 @@ extents = Vector2( 10, 103 )
 
 [node name="BeepBoop" parent="." instance=ExtResource( 1 )]
 position = Vector2( -1, -102 )
-health = 100.0
 
 [node name="WalkingEnemy2" parent="." instance=ExtResource( 4 )]
 position = Vector2( -497, -77 )
@@ -29,7 +28,7 @@ collision_layer = 16
 collision_mask = 31
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FloorTest"]
-position = Vector2( -27.5, 0 )
+position = Vector2( -35, -18 )
 shape = SubResource( 1 )
 
 [node name="FloorTest4" type="KinematicBody2D" parent="."]

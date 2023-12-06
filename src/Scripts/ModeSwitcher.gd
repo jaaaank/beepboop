@@ -4,7 +4,6 @@ extends Area2D
 var canswitch: bool = false
 var player
 
-
 func _input(event):
 	if Input.is_action_just_pressed("1") and canswitch:
 		player.call("switchMode",1)

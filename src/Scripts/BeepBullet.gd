@@ -8,7 +8,6 @@ func _physics_process(delta):
 	position += transform.x * speed * delta
 	#make the sprites symmetrical so i dont have to flip them
 
-
 func _on_Bullet_body_entered(body):
 	if body.get_collision_layer_bit(0):
 		body.call("damage")
