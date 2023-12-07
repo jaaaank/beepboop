@@ -23,7 +23,7 @@ func damage(dmg):
 
 func _on_hitbox_body_entered(body):
 	if body.get_collision_layer_bit(0):
-		body.call("damage")
+		body.call("damage", 1)
 		print(("damaged player"))
 	
 func die():

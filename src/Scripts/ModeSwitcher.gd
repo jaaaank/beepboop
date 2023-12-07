@@ -14,6 +14,7 @@ func _input(event):
 
 func _on_ModeSwitcher_body_entered(body):
 	player = body
+	player.respawnpoint = $point.global_position
 	canswitch = true
 
 func _on_ModeSwitcher_body_exited(body):

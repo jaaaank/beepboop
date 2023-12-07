@@ -51,4 +51,6 @@ position = Vector2( 184, -40 )
 wait_time = 0.5
 one_shot = true
 
+[node name="UI" type="CanvasLayer" parent="."]
+
 [connection signal="timeout" from="GUN/cooldowntimer" to="GUN" method="_on_cooldowntimer_timeout"]

@@ -2,10 +2,11 @@ extends Actor
 
 export (float, 0, 1.0) var friction = 0.1
 export (float, 0, 1.0) var acceleration = 0.25
+export var respawnpoint: Vector2 = Vector2(0,0)
 
 #0 = normal mode
 #1 = jump mode (moves a bit faster and jumps much higher)
-#2 = defense mode (moves slow but can move over obstacles)
+#2 = run mode (moves much faster and jumps a bit higher)
 #3 = attack mode (gets attack guns)
 #4 = BIG mode (final boss only)
 export var mode: int = 0
@@ -51,8 +52,8 @@ func calculate_move_velocity(
 		out.y = 0.0
 	return out
 
-func damage():
-	health -=1
+func damage(dmg):
+	health -=dmg
 	print("beepdamaged")
 	if health <= 0:
 		die()
@@ -83,5 +84,6 @@ func switchMode(newMode):
 		print("not attack mode")
 	print(mode)
 	
-func die() -> void:
-	queue_free()
+func die():
+	position = respawnpoint
+	#queue_free()

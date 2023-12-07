@@ -4,19 +4,22 @@
 [ext_resource path="res://Assets/Art/BigMode_Checkpoint.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 14, 28.5 )
+extents = Vector2( 14, 28.25 )
 
 [node name="ModeSwitcher" type="Area2D"]
 collision_layer = 32
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -29 )
+position = Vector2( 0, -28.75 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -26 )
 texture = ExtResource( 2 )
+
+[node name="point" type="Node2D" parent="."]
+position = Vector2( 0, -50 )
 
 [connection signal="body_entered" from="." to="." method="_on_ModeSwitcher_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_ModeSwitcher_body_exited"]
