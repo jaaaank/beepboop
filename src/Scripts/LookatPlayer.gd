@@ -11,7 +11,7 @@ func _process(delta):
 		gun.flip_v = true
 	if gun.flip_v and int(abs(rotation_degrees))%360<90 or int(abs(rotation_degrees))%360>270:
 		gun.flip_v = false
-	look_at(player.position)
+	look_at(player.global_position)
 	
 func fireBullet():
 	var b = bullet.instance()
