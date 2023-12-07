@@ -12,15 +12,14 @@ func _process(delta):
 	look_at(get_global_mouse_position())
 
 func _input(event):
-	if Input.is_action_just_pressed("shoot") and not cooldown and visible:
+	if Input.is_action_just_pressed("shoot") and !cooldown and visible:
 		var b = bullet.instance()
-		get_parent().get_parent().add_child(b)
-		b.position = global_position
+		get_tree().root.add_child(b)
+		b.position = $GunSprite/muzzle.global_position
 		b.scale = scale
 		b.rotation_degrees = rotation_degrees
 		cooldown = true
 		$cooldowntimer.start()
-
 
 func _on_cooldowntimer_timeout():
 	cooldown = false

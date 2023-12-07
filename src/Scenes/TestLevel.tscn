@@ -236,7 +236,7 @@ extents = Vector2( 10, 103 )
 [node name="TestLevel" type="Node2D"]
 position = Vector2( 33, 41 )
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="PlatformTilemap" type="TileMap" parent="."]
 tile_set = SubResource( 3 )
 cell_size = Vector2( 40, 40 )
 cell_custom_transform = Transform2D( 40, 0, 0, 40, 0, 0 )
@@ -277,10 +277,10 @@ shape = SubResource( 2 )
 position = Vector2( -160, -57 )
 
 [node name="Turret" parent="." instance=ExtResource( 3 )]
-position = Vector2( 176, -61 )
+position = Vector2( 475, 142 )
 
 [node name="FlyingTurretEnemy" parent="." instance=ExtResource( 5 )]
-position = Vector2( 180, -194 )
+position = Vector2( 492, 243 )
 
 [node name="Spike" parent="." instance=ExtResource( 7 )]
 position = Vector2( 419, 0 )

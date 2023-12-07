@@ -12,6 +12,7 @@ extents = Vector2( 13.5, 31 )
 [node name="BeepBoop" type="KinematicBody2D"]
 collision_mask = 28
 script = ExtResource( 2 )
+health = 5.0
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.525641, 0.53233 )
@@ -42,6 +43,9 @@ bullet = ExtResource( 5 )
 position = Vector2( 17, 1 )
 scale = Vector2( 0.125, 0.125 )
 texture = ExtResource( 3 )
+
+[node name="muzzle" type="Node2D" parent="GUN/GunSprite"]
+position = Vector2( 184, -40 )
 
 [node name="cooldowntimer" type="Timer" parent="GUN"]
 wait_time = 0.5
