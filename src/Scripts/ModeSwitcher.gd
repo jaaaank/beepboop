@@ -17,6 +17,8 @@ func _on_ModeSwitcher_body_entered(body):
 		player.respawnpoint = $point.global_position
 		$AnimationPlayer.play("activate")
 	canswitch = true
+	$ModeText.visible = true
 
 func _on_ModeSwitcher_body_exited(body):
 	canswitch = false
+	$ModeText.visible = false
