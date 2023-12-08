@@ -14,9 +14,12 @@ onready var sprite: Sprite = $Sprite
 onready var AnimP: = $AnimationPlayer
 onready var AudioHurt = $PlayerHurt
 onready var AudioDeath = $PlayerDead
+onready var onehp: Sprite = $UI/Control/Node2D/onehp
+onready var twohp: Sprite = $UI/Control/Node2D/twohp
+onready var threehp: Sprite = $UI/Control/Node2D/threehp
 
 func ready():
-	health = 5
+	health = 3
 	
 func _physics_process(_delta: float):
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
@@ -54,6 +57,7 @@ func calculate_move_velocity(
 
 func damage(dmg):
 	health -=dmg
+	updateinterface()
 	print("beepdamaged")
 	if health <= 0:
 		die()
@@ -86,4 +90,21 @@ func switchMode(newMode):
 	
 func die():
 	position = respawnpoint
+	health = 3
+	updateinterface()
 	#queue_free()
+	
+func updateinterface():
+	match health:
+		3.0:
+			onehp.frame = 0
+			twohp.frame = 0
+			threehp.frame = 0
+		2.0:
+			onehp.frame = 0
+			twohp.frame = 0
+			threehp.frame = 1
+		1.0:
+			onehp.frame = 0
+			twohp.frame = 1
+			threehp.frame = 1

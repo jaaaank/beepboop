@@ -1,6 +1,5 @@
 extends Area2D
 
-
 var canswitch: bool = false
 var player
 
@@ -14,7 +13,9 @@ func _input(event):
 
 func _on_ModeSwitcher_body_entered(body):
 	player = body
-	player.respawnpoint = $point.global_position
+	if player.respawnpoint != $point.global_position:
+		player.respawnpoint = $point.global_position
+		$AnimationPlayer.play("activate")
 	canswitch = true
 
 func _on_ModeSwitcher_body_exited(body):
