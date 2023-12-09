@@ -39,6 +39,7 @@ tracks/0/keys = {
 }
 
 [node name="ModeSwitcher" type="Area2D"]
+scale = Vector2( 2, 2 )
 collision_layer = 32
 script = ExtResource( 1 )
 

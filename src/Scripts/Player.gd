@@ -21,6 +21,7 @@ onready var threehp: Sprite = $UI/Control/Node2D/threehp
 func ready():
 	health = 3
 	
+	
 func _physics_process(_delta: float):
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
 	var dir: = get_direction() 
@@ -34,9 +35,7 @@ func _physics_process(_delta: float):
 		_velocity.x =0
 	if Input.is_action_just_pressed("jump"):
 		dir.y = -1.0
-		if mode ==2:
-			dir.x *= 1.5
-	
+
 func get_direction() -> Vector2:
 	return Vector2 (
 		Input.get_action_strength("moveRight") - Input.get_action_strength("moveLeft"), 
