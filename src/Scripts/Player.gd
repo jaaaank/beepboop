@@ -34,6 +34,8 @@ func _physics_process(_delta: float):
 		_velocity.x =0
 	if Input.is_action_just_pressed("jump"):
 		dir.y = -1.0
+		if mode ==2:
+			dir.x *= 1.5
 	
 func get_direction() -> Vector2:
 	return Vector2 (
@@ -54,6 +56,12 @@ func calculate_move_velocity(
 	if is_jump_interrupted:
 		out.y = 0.0
 	return out
+
+#func _input(event):
+#	if Input.is_action_just_pressed("dash"):
+#		_velocity.x *= 20
+#		if _velocity.x ==0:
+#			_velocity.x = 3000
 
 func damage(dmg):
 	health -=dmg

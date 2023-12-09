@@ -16,7 +16,7 @@ func _process(delta):
 func fireBullet():
 	var b = bullet.instance()
 	get_tree().root.add_child(b)
-	b.position = global_position
+	b.position = $muzzle.global_position
 	b.scale = scale
 	b.rotation_degrees = rotation_degrees
 	cooldown = true

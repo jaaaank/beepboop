@@ -40,4 +40,7 @@ wait_time = 2.0
 one_shot = true
 autostart = true
 
+[node name="muzzle" type="Node2D" parent="LookatPlayer"]
+position = Vector2( 42, -4 )
+
 [connection signal="timeout" from="LookatPlayer/cooldowntimer" to="LookatPlayer" method="fireBullet"]
