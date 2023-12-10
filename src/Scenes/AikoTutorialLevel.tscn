@@ -1,8 +1,10 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://src/Actors/BeepBoop.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/ModeSwitcher.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Actors/enemies/Spike.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Actors/enemies/WalkingEnemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Actors/enemies/FlyingEnemy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/Art/tilemap.png" type="Texture" id=6]
 
 [sub_resource type="TileSet" id=18]
@@ -539,14 +541,31 @@ bbcode_text = "[center]Holding space will let you jump higher"
 text = "Holding space will let you jump higher"
 
 [node name="jump3" type="RichTextLabel" parent="."]
-margin_left = 1037.0
+margin_left = 1007.0
 margin_top = -299.0
-margin_right = 1264.0
+margin_right = 1234.0
 margin_bottom = -228.0
+rect_pivot_offset = Vector2( 102, 0 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]Spikes will kill you instantly"
 text = "Spikes will kill you instantly"
+
+[node name="jump4" type="RichTextLabel" parent="."]
+margin_left = 1336.0
+margin_top = -306.0
+margin_right = 1468.0
+margin_bottom = -235.0
+rect_pivot_offset = Vector2( 102, 0 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Respawn and Switch modes here~"
+tab_size = 3
+text = "Respawn and Switch modes here~"
+__meta__ = {
+"_editor_description_": "Hello
+"
+}
 
 [node name="move" type="RichTextLabel" parent="."]
 margin_left = -79.0
@@ -567,3 +586,9 @@ position = Vector2( 1139, -120 )
 
 [node name="Spike2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1179, -120 )
+
+[node name="WalkingEnemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1743, -238 )
+
+[node name="FlyingEnemy" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1906, -326 )
