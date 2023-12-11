@@ -365,7 +365,7 @@ position = Vector2( 340, -4 )
 position = Vector2( 34, -33 )
 respawnpoint = Vector2( 34, -33 )
 
-[node name="Camera2D" parent="BeepBoop" index="2"]
+[node name="Camera2D" parent="BeepBoop" index="0"]
 zoom = Vector2( 0.65, 0.65 )
 
 [node name="WalkingEnemy2" parent="." instance=ExtResource( 4 )]

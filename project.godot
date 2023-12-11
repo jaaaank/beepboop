@@ -26,7 +26,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Beep Boop"
+config/name="beepboop"
 run/main_scene="res://src/Scenes/TitleScreen.tscn"
 config/icon="res://icon.png"
 
