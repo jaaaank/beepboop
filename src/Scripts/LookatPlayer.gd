@@ -1,7 +1,7 @@
 extends Node2D
 
-
-onready var player = get_tree().root.get_node("TestLevel/BeepBoop")
+onready var route = get_tree().root.get_child(0).name
+onready var player = get_tree().root.get_node(route + "/BeepBoop")
 export (PackedScene) var bullet
 onready var gun = $Sprite
 var cooldown: bool = false
