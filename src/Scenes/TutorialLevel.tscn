@@ -475,6 +475,3 @@ position = Vector2( 1542, -67 )
 
 [node name="FallingSpike" parent="." instance=ExtResource( 7 )]
 position = Vector2( 135, -162 )
-
-[node name="FallingSpike2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 135, -162 )
