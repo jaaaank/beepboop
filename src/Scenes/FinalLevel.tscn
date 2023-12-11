@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://src/Actors/BeepBoop.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/ModeSwitcher.tscn" type="PackedScene" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://src/Actors/lgPlatform.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Actors/smPlatform.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/Art/tilemap.png" type="Texture" id=6]
-[ext_resource path="res://src/Actors/enemies/FallingSpike.tscn" type="PackedScene" id=7]
 
 [sub_resource type="TileSet" id=18]
 0/name = "tilemap.png 0"
@@ -423,47 +422,6 @@ position = Vector2( 4544, 22 )
 position = Vector2( 34, -33 )
 respawnpoint = Vector2( 34, -33 )
 
-[node name="jump" type="RichTextLabel" parent="."]
-margin_left = 1124.0
-margin_top = 12.0
-margin_right = 1351.0
-margin_bottom = 83.0
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = true
-bbcode_text = "[center]Space to jump"
-text = "Space to jump"
-
-[node name="jump2" type="RichTextLabel" parent="."]
-margin_left = 1763.0
-margin_top = 50.0
-margin_right = 1990.0
-margin_bottom = 121.0
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = true
-bbcode_text = "[center]Holding space will let you jump higher"
-text = "Holding space will let you jump higher"
-
-[node name="jump3" type="RichTextLabel" parent="."]
-margin_left = 2735.0
-margin_top = -36.0
-margin_right = 2962.0
-margin_bottom = 35.0
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = true
-bbcode_text = "[center]Spikes will kill you instantly"
-text = "Spikes will kill you instantly"
-
-[node name="move" type="RichTextLabel" parent="."]
-margin_left = 93.0
-margin_top = -157.0
-margin_right = 320.0
-margin_bottom = -86.0
-input_pass_on_modal_close_click = false
-custom_colors/default_color = Color( 1, 1, 1, 1 )
-bbcode_enabled = true
-bbcode_text = "[center]W/D To move"
-text = "W/D To move"
-
 [node name="Spike" parent="." instance=ExtResource( 3 )]
 position = Vector2( 3020, -41 )
 
@@ -472,9 +430,3 @@ position = Vector2( 1713, -130 )
 
 [node name="StaticBody2D2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1542, -67 )
-
-[node name="FallingSpike" parent="." instance=ExtResource( 7 )]
-position = Vector2( 135, -162 )
-
-[node name="FallingSpike2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 135, -162 )
