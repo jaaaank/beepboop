@@ -360,7 +360,6 @@ tile_data = PoolIntArray( -655358, 10, 0, -655357, 6, 0, -655355, 6, 0, -655353,
 
 [node name="ModeSwitcher" parent="." instance=ExtResource( 2 )]
 position = Vector2( 340, -4 )
-scale = Vector2( 2, 2 )
 
 [node name="BeepBoop" parent="." instance=ExtResource( 1 )]
 position = Vector2( 34, -33 )
@@ -368,7 +367,6 @@ respawnpoint = Vector2( 34, -33 )
 
 [node name="Camera2D" parent="BeepBoop" index="2"]
 zoom = Vector2( 0.65, 0.65 )
-limit_bottom = 150
 
 [node name="WalkingEnemy2" parent="." instance=ExtResource( 4 )]
 position = Vector2( -340, -57 )

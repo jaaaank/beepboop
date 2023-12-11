@@ -52,9 +52,6 @@ position = Vector2( 0, -26 )
 texture = ExtResource( 2 )
 hframes = 3
 
-[node name="point" type="Node2D" parent="."]
-position = Vector2( 0, -50 )
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 3 )
 anims/activate = SubResource( 2 )
@@ -73,6 +70,9 @@ bbcode_text = "[center]1= jump mode
 text = "1= jump mode
 2 = run mode
 3= attack mode"
+
+[node name="point" type="Node2D" parent="."]
+position = Vector2( 0, -43 )
 
 [connection signal="body_entered" from="." to="." method="_on_ModeSwitcher_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_ModeSwitcher_body_exited"]

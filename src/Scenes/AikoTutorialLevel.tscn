@@ -488,7 +488,7 @@ points = PoolVector2Array( 40, 80, 0, 80, 0, 0, 40, 0 )
 17/shapes = [  ]
 17/z_index = 0
 
-[node name="TestLevel" type="Node2D"]
+[node name="TestLevel2" type="Node2D"]
 position = Vector2( 33, 41 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
