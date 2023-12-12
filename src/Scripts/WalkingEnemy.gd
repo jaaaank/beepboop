@@ -30,3 +30,7 @@ func damage(dmg):
 	
 func die():
 	queue_free()
+
+
+func _on_walktimer_timeout():
+	_velocity.x *= -1.0

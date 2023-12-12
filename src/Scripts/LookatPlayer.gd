@@ -5,6 +5,8 @@ onready var player = get_tree().root.get_node(route + "/BeepBoop")
 export (PackedScene) var bullet
 onready var gun = $Sprite
 var cooldown: bool = false
+export var raynge: int = 700
+
 
 func _process(delta):
 	if !gun.flip_v and int(abs(rotation_degrees))%360>90 and int(abs(rotation_degrees))%360<270:
@@ -14,10 +16,12 @@ func _process(delta):
 	look_at(player.global_position)
 	
 func fireBullet():
-	var b = bullet.instance()
-	get_tree().root.add_child(b)
-	b.position = $muzzle.global_position
-	b.scale = scale
-	b.rotation_degrees = rotation_degrees
-	cooldown = true
+	if abs(player.global_position.x - global_position.x) <= raynge: 
+		print(abs(player.global_position.x - global_position.x))
+		var b = bullet.instance()
+		get_tree().root.add_child(b)
+		b.position = $muzzle.global_position
+		b.scale = scale
+		b.rotation_degrees = rotation_degrees
+		cooldown = true
 	$cooldowntimer.start()
