@@ -5,7 +5,7 @@ onready var player = get_tree().root.get_node(route + "/BeepBoop")
 export (PackedScene) var bullet
 onready var gun = $Sprite
 var cooldown: bool = false
-export var raynge: int = 500
+export var raynge: int = 400
 
 
 func _process(delta):
