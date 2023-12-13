@@ -1665,6 +1665,34 @@ rotation = -1.5708
 position = Vector2( 4273, -1459 )
 rotation = 1.5708
 
+[node name="Spike73" parent="spikes" instance=ExtResource( 7 )]
+position = Vector2( 3653, -1959 )
+
+[node name="Spike74" parent="spikes" instance=ExtResource( 7 )]
+position = Vector2( 3693, -1959 )
+
+[node name="Spike75" parent="spikes" instance=ExtResource( 7 )]
+position = Vector2( 3773, -1959 )
+
+[node name="Spike76" parent="spikes" instance=ExtResource( 7 )]
+position = Vector2( 3813, -1959 )
+
+[node name="Spike77" parent="spikes" instance=ExtResource( 7 )]
+position = Vector2( 3933, -1959 )
+
+[node name="Spike78" parent="spikes" instance=ExtResource( 7 )]
+position = Vector2( 3973, -1959 )
+
+[node name="Spike79" parent="spikes" instance=ExtResource( 7 )]
+position = Vector2( 4213, -1920 )
+
+[node name="Spike80" parent="spikes" instance=ExtResource( 7 )]
+position = Vector2( 4253, -1920 )
+
+[node name="Spike81" parent="spikes" instance=ExtResource( 7 )]
+position = Vector2( 4513, -1939 )
+rotation = -1.5708
+
 [node name="Spike68" parent="spikes" instance=ExtResource( 7 )]
 position = Vector2( 4753, -1419 )
 rotation = 1.5708
@@ -1959,16 +1987,16 @@ position = Vector2( 3388, 65 )
 position = Vector2( 3529, 79 )
 
 [node name="smPlatform5" parent="platforms" instance=ExtResource( 6 )]
-position = Vector2( 3532, 29 )
+position = Vector2( 3563, 26 )
 
 [node name="smPlatform6" parent="platforms" instance=ExtResource( 6 )]
-position = Vector2( 3532, -17 )
+position = Vector2( 3590, -23 )
 
 [node name="smPlatform7" parent="platforms" instance=ExtResource( 6 )]
-position = Vector2( 3619, -48 )
+position = Vector2( 3687, -52 )
 
 [node name="smPlatform8" parent="platforms" instance=ExtResource( 6 )]
-position = Vector2( 3712, -79 )
+position = Vector2( 3803, -70 )
 
 [node name="smPlatform9" parent="platforms" instance=ExtResource( 6 )]
 position = Vector2( 4325, -13 )
@@ -2110,6 +2138,9 @@ position = Vector2( 4893, -1163 )
 
 [node name="walktimer" parent="enemies/WalkingEnemy" index="3"]
 wait_time = 1.0
+
+[node name="FlyingTurretEnemy" parent="enemies" instance=ExtResource( 11 )]
+position = Vector2( 3614, -2119 )
 
 [node name="FlyingTurretEnemy" parent="." instance=ExtResource( 11 )]
 position = Vector2( 4411, -2149 )

@@ -7,22 +7,33 @@ script/source = "extends RigidBody2D
 
 
 export var impulse = 500
+var ogpos
 
 func _ready():
+	ogpos = global_position
 	gravity_scale = 0
 
 func _on_Sensor_body_entered(_body):
 	$AnimationPlayer.play(\"wiggle\")
 
 
-func _on_AnimationPlayer_animation_finished(_anim_name):
-	gravity_scale = 1
-	apply_impulse(Vector2(0,0), Vector2(0, impulse))
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == \"wiggle\":
+		gravity_scale = 1
+		apply_impulse(Vector2(0,0), Vector2(0, impulse))
+	$Timer.start()
 
 
 func _on_FallingSpike_body_entered(body):
+	global_position.y += 5000
 	body.call(\"damage\", 1)
-	queue_free()
+
+
+func respawn():
+	global_position = ogpos
+	rotation_degrees = 0
+	gravity_scale = 0
+	linear_velocity = Vector2(0,0)
 "
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -83,6 +94,11 @@ shape = SubResource( 1 )
 anims/RESET = SubResource( 4 )
 anims/wiggle = SubResource( 3 )
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
 [connection signal="body_entered" from="." to="." method="_on_FallingSpike_body_entered"]
 [connection signal="body_entered" from="Sensor" to="." method="_on_Sensor_body_entered"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="respawn"]

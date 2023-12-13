@@ -1,4 +1,4 @@
 extends Control
 
 func _on_Button_pressed():
-	get_tree().change_scene("res://src/Scenes/TutorialLevel.tscn")
+	get_tree().change_scene("res://src/Scenes/AikoTutorialLevel.tscn")
