@@ -66,7 +66,7 @@ func calculate_move_velocity(
 func damage(dmg):
 	health -=dmg
 	updateinterface()
-	print("beepdamaged")
+	$beepdamaged.play()
 	if health <= 0:
 		die()
 	
