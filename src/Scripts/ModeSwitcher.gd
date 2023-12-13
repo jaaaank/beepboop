@@ -23,14 +23,18 @@ func _ready():
 func _input(_event):
 	if Input.is_action_just_pressed("1") and canswitch and jumpEnabled:
 		player.call("switchMode",1)
+		$AudioStreamPlayer2D.play()
 	elif Input.is_action_just_pressed("2") and canswitch and runEnabled:
 		player.call("switchMode",2)
+		$AudioStreamPlayer2D.play()
 	elif Input.is_action_just_pressed("3") and canswitch and attackEnabled:
 		player.call("switchMode",3)
+		$AudioStreamPlayer2D.play()
 
 func _on_ModeSwitcher_body_entered(body):
 	player = body
 	if player.respawnpoint != point.global_position:
+		$AudioStreamPlayer2D2.play()
 		animp.play("activate")
 	if player.health != 3:
 		player.health = 3

@@ -13,6 +13,7 @@ func _process(_delta):
 
 func _input(_event):
 	if Input.is_action_just_pressed("shoot") and !cooldown and visible:
+		$Lasershoot.play()
 		var b = bullet.instance()
 		get_tree().root.add_child(b)
 		b.position = $GunSprite/muzzle.global_position
