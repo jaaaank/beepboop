@@ -18,8 +18,8 @@ func _input(_event):
 func _on_ModeSwitcher_body_entered(body):
 	player = body
 	if player.respawnpoint != point.global_position:
-		player.respawnpoint = point.global_position
 		animp.play("activate")
+	player.respawnpoint = point.global_position
 	canswitch = true
 	text.visible = true
 

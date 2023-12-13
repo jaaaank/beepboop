@@ -97,7 +97,7 @@ func switchMode(newMode):
 	print(mode)
 	
 func die():
-	position = respawnpoint
+	global_position = respawnpoint
 	health = 3
 	updateinterface()
 	#queue_free()
