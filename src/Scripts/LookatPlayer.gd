@@ -5,7 +5,7 @@ onready var player = get_tree().root.get_node(route + "/BeepBoop")
 export (PackedScene) var bullet
 onready var gun = $Sprite
 var cooldown: bool = false
-export var raynge: int = 700
+export var raynge: int = 500
 
 
 func _process(delta):
@@ -16,7 +16,7 @@ func _process(delta):
 	look_at(player.global_position)
 	
 func fireBullet():
-	if abs(player.global_position.x - global_position.x) <= raynge: 
+	if global_position.distance_to(player.global_position) <= raynge: 
 		print(abs(player.global_position.x - global_position.x))
 		var b = bullet.instance()
 		get_tree().root.add_child(b)
