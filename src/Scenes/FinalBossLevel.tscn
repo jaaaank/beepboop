@@ -1644,6 +1644,9 @@ anims/wiggle = SubResource( 70 )
 position = Vector2( 1693, -130 )
 z_index = -1
 
+[node name="CollisionPolygon2D" parent="fallingspikes/FallingSpike28" index="1"]
+polygon = PoolVector2Array( -14, -24, -7.065, 3.74008, 0, 32, 14, -24, 21, -31, 0, -33, -21, -31 )
+
 [node name="Sensor" parent="fallingspikes/FallingSpike28" index="2"]
 position = Vector2( -737, 120 )
 
@@ -2079,7 +2082,7 @@ position = Vector2( 4040, -45 )
 position = Vector2( 4420, -1509 )
 
 [node name="BeepBoop" parent="." instance=ExtResource( 2 )]
-position = Vector2( 4407, -1537 )
+position = Vector2( 186, -95 )
 respawnpoint = Vector2( 34, -33 )
 
 [node name="Camera2D" parent="BeepBoop" index="0"]
@@ -2142,8 +2145,14 @@ wait_time = 1.0
 [node name="FlyingTurretEnemy" parent="enemies" instance=ExtResource( 11 )]
 position = Vector2( 3614, -2119 )
 
-[node name="FlyingTurretEnemy" parent="." instance=ExtResource( 11 )]
-position = Vector2( 4411, -2149 )
+[node name="FlyingTurretEnemy2" parent="enemies" instance=ExtResource( 11 )]
+position = Vector2( 4444, -2108 )
+
+[node name="FlyingTurretEnemy3" parent="enemies" instance=ExtResource( 11 )]
+position = Vector2( 5056, -845 )
+
+[node name="WalkingEnemy2" parent="enemies" instance=ExtResource( 10 )]
+position = Vector2( 4771, -758 )
 
 [editable path="fallingspikes/FallingSpike"]
 [editable path="fallingspikes/FallingSpike2"]

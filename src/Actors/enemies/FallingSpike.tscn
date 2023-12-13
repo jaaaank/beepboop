@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Art/falling_spike.png" type="Texture" id=1]
 
@@ -14,26 +14,31 @@ func _ready():
 	gravity_scale = 0
 
 func _on_Sensor_body_entered(_body):
-	$AnimationPlayer.play(\"wiggle\")
+	if $AnimationPlayer.current_animation == \"\" or $AnimationPlayer.current_animation == \"RESET\":
+		$AnimationPlayer.play(\"wiggle\")
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == \"wiggle\":
 		gravity_scale = 1
 		apply_impulse(Vector2(0,0), Vector2(0, impulse))
+	if anim_name == \"comeback\":
+		$Sensor/CollisionShape2D.disabled = false
 	$Timer.start()
 
 
 func _on_FallingSpike_body_entered(body):
 	global_position.y += 5000
 	body.call(\"damage\", 1)
-
+	$Sensor/CollisionShape2D.disabled = true
 
 func respawn():
 	global_position = ogpos
 	rotation_degrees = 0
 	gravity_scale = 0
 	linear_velocity = Vector2(0,0)
+	angular_velocity = 0
+	$AnimationPlayer.play(\"comeback\")
 "
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -53,6 +58,10 @@ tracks/0/keys = {
 "values": [ 0.0 ]
 }
 
+[sub_resource type="Animation" id=5]
+resource_name = "comeback"
+length = 0.5
+
 [sub_resource type="Animation" id=3]
 resource_name = "wiggle"
 length = 1.6
@@ -71,6 +80,7 @@ tracks/0/keys = {
 
 [node name="FallingSpike" type="RigidBody2D"]
 collision_layer = 8
+gravity_scale = 0.0
 contacts_reported = 1
 contact_monitor = true
 can_sleep = false
@@ -92,6 +102,7 @@ shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 4 )
+anims/comeback = SubResource( 5 )
 anims/wiggle = SubResource( 3 )
 
 [node name="Timer" type="Timer" parent="."]
