@@ -17,6 +17,7 @@ func _process(_delta):
 	
 func fireBullet():
 	if global_position.distance_to(player.global_position) <= raynge: 
+		$shootsound.play()
 		print(abs(player.global_position.x - global_position.x))
 		var b = bullet.instance()
 		get_tree().root.add_child(b)

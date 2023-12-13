@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Art/bipbop.png" type="Texture" id=1]
 [ext_resource path="res://src/Scripts/Player.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://src/Scripts/PauseMenu.gd" type="Script" id=7]
 [ext_resource path="res://Assets/Audio/laserShoot.wav" type="AudioStream" id=8]
 [ext_resource path="res://Assets/Audio/beephurt.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/font.tres" type="DynamicFont" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 13.5, 27 )
@@ -49,8 +50,7 @@ position = Vector2( -1, -2 )
 script = ExtResource( 4 )
 bullet = ExtResource( 5 )
 
-[node name="Lasershoot" type="AudioStreamPlayer2D" parent="GUN"]
-position = Vector2( 1, 2 )
+[node name="Lasershoot" type="AudioStreamPlayer" parent="GUN"]
 stream = ExtResource( 8 )
 
 [node name="GunSprite" type="Sprite" parent="GUN"]
@@ -105,20 +105,24 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -23.0
-margin_top = -166.0
-margin_right = 23.0
-margin_bottom = -152.0
+margin_left = -180.0
+margin_top = -194.0
+margin_right = 180.0
+margin_bottom = -74.0
+custom_colors/font_color = Color( 0, 0.427451, 0.611765, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 10 )
 text = "Paused"
+uppercase = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/PauseMenu"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -28.0
+margin_left = -32.0
 margin_top = -20.0
-margin_right = 28.0
+margin_right = 32.0
 margin_bottom = 20.0
 
 [node name="RsuemButton" type="Button" parent="UI/PauseMenu/VBoxContainer"]
@@ -126,8 +130,9 @@ margin_right = 64.0
 margin_bottom = 20.0
 text = "Resume"
 
-[node name="beepdamaged" type="AudioStreamPlayer2D" parent="."]
+[node name="beepdamaged" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
+volume_db = -5.0
 
 [connection signal="timeout" from="GUN/cooldowntimer" to="GUN" method="_on_cooldowntimer_timeout"]
 [connection signal="button_down" from="UI/PauseMenu/VBoxContainer/RsuemButton" to="UI/PauseMenu" method="_on_RsuemButton_button_down"]

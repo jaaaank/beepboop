@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/Scripts/LookatPlayer.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Art/gun.png" type="Texture" id=2]
 [ext_resource path="res://src/Actors/enemies/EnemyBullet.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Scripts/Turret.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Audio/enemyshoot.wav" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -42,5 +43,8 @@ autostart = true
 
 [node name="muzzle" type="Node2D" parent="LookatPlayer"]
 position = Vector2( 42, -4 )
+
+[node name="shootsound" type="AudioStreamPlayer2D" parent="LookatPlayer"]
+stream = ExtResource( 5 )
 
 [connection signal="timeout" from="LookatPlayer/cooldowntimer" to="LookatPlayer" method="fireBullet"]
