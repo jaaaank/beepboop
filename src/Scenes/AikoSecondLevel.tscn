@@ -402,6 +402,7 @@ __meta__ = {
 }
 
 [node name="Background tiles" type="TileMap" parent="."]
+z_index = -10
 tile_set = SubResource( 18 )
 cell_size = Vector2( 40, 40 )
 cell_custom_transform = Transform2D( 40, 0, 0, 40, 0, 0 )

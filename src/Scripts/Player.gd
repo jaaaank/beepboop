@@ -80,7 +80,7 @@ func switchMode(newMode):
 			print("jump mode")
 		2:
 			pass # run mode
-			speed = Vector2(700,600)
+			speed = Vector2(700,700)
 			print("run mode")
 		3: 
 			pass # attack mode

@@ -64,12 +64,6 @@ margin_right = 85.0
 margin_bottom = -13.0
 rect_scale = Vector2( 0.495611, 0.495611 )
 bbcode_enabled = true
-bbcode_text = "[center]1= jump mode
-2 = run mode
-3= attack mode"
-text = "1= jump mode
-2 = run mode
-3= attack mode"
 
 [node name="point" type="Node2D" parent="."]
 position = Vector2( 0, -43 )

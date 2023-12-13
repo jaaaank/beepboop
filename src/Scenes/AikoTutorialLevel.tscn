@@ -562,6 +562,7 @@ __meta__ = {
 }
 
 [node name="Background tiles" type="TileMap" parent="."]
+z_index = -10
 tile_set = SubResource( 18 )
 cell_size = Vector2( 40, 40 )
 cell_custom_transform = Transform2D( 40, 0, 0, 40, 0, 0 )
@@ -617,6 +618,11 @@ position = Vector2( 5469, -444 )
 
 [node name="ModeSwitcher" parent="." instance=ExtResource( 2 )]
 position = Vector2( 2703, -205 )
+attackEnabled = false
+
+[node name="Spike" parent="ModeSwitcher" instance=ExtResource( 3 )]
+position = Vector2( -89.4999, 418.5 )
+scale = Vector2( 100, 2.005 )
 
 [node name="BeepBoop" parent="." instance=ExtResource( 1 )]
 position = Vector2( 2634, -241 )
@@ -903,6 +909,7 @@ position = Vector2( 6124, -1590 )
 [editable path="FallingSpike"]
 [editable path="FallingSpike2"]
 [editable path="FallingSpike3"]
+[editable path="ModeSwitcher"]
 [editable path="FlyingEnemy"]
 [editable path="FlyingEnemy2"]
 [editable path="WalkingEnemy2"]

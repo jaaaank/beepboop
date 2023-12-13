@@ -11,11 +11,11 @@ export var impulse = 500
 func _ready():
 	gravity_scale = 0
 
-func _on_Sensor_body_entered(body):
+func _on_Sensor_body_entered(_body):
 	$AnimationPlayer.play(\"wiggle\")
 
 
-func _on_AnimationPlayer_animation_finished(anim_name):
+func _on_AnimationPlayer_animation_finished(_anim_name):
 	gravity_scale = 1
 	apply_impulse(Vector2(0,0), Vector2(0, impulse))
 

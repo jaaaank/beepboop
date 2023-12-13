@@ -3,7 +3,7 @@ extends Actor
 var left: bool = false
 var schpeed: int = 300
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	move_and_slide(Vector2(schpeed,0))
 	if is_on_wall():
 		_on_Timer_timeout()
