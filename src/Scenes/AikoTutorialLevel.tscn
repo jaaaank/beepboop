@@ -835,7 +835,7 @@ position = Vector2( 4881, -441 )
 position = Vector2( 4841, -606 )
 
 [node name="Timer" parent="FlyingTurretEnemy3" index="2"]
-wait_time = 0.001
+wait_time = 0.05
 
 [node name="FallingSpike5" parent="." instance=ExtResource( 7 )]
 position = Vector2( 4982, -568 )

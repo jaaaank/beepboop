@@ -1,13 +1,62 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Assets/Art/flyingenemy.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Art/flying_enemy_spritesheet.png" type="Texture" id=1]
 [ext_resource path="res://src/Scripts/FlyingEnemy.gd" type="Script" id=2]
 [ext_resource path="res://src/Actors/enemies/Turret.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 7.0
+radius = 6.0
 
 [sub_resource type="CircleShape2D" id=2]
+radius = 9.0
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Flyingenemy:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "attack"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Flyingenemy:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 12, 13, 14, 15, 16, 17, 18 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "fly"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Flyingenemy:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8, 9, 10, 11 ]
+}
 
 [node name="FlyingTurretEnemy" type="KinematicBody2D"]
 collision_layer = 4
@@ -15,10 +64,13 @@ collision_mask = 19
 script = ExtResource( 2 )
 
 [node name="Flyingenemy" type="Sprite" parent="."]
+position = Vector2( -9.53674e-07, -9.53674e-07 )
+scale = Vector2( 1.25, 1.25 )
 texture = ExtResource( 1 )
+hframes = 6
+vframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -2 )
 shape = SubResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]
@@ -36,5 +88,12 @@ shape = SubResource( 2 )
 [node name="Turret" parent="." instance=ExtResource( 3 )]
 position = Vector2( -1, -18 )
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "fly"
+anims/RESET = SubResource( 3 )
+anims/attack = SubResource( 4 )
+anims/fly = SubResource( 5 )
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
