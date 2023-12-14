@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=2]
+[gd_scene load_steps=84 format=2]
 
 [ext_resource path="res://src/Actors/ModeSwitcher.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/BeepBoop.tscn" type="PackedScene" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://src/Actors/enemies/Turret.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Actors/enemies/WalkingEnemy.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/Actors/enemies/FlyingTurretEnemy.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/Art/orangs.jpg" type="Texture" id=12]
+[ext_resource path="res://Assets/Art/oombasideeye.jpg" type="Texture" id=13]
 
 [sub_resource type="TileSet" id=73]
 0/name = "tilemap.png 0"
@@ -1336,6 +1338,14 @@ position = Vector2( 33, 41 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
+
+[node name="Orangs" type="Sprite" parent="."]
+position = Vector2( 109, -2502 )
+texture = ExtResource( 12 )
+
+[node name="Oombasideeye" type="Sprite" parent="."]
+position = Vector2( 241, -2504 )
+texture = ExtResource( 13 )
 
 [node name="Background tiles" type="TileMap" parent="."]
 z_index = -10
