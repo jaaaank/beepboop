@@ -3,6 +3,7 @@ extends Actor
 export (float, 0, 1.0) var friction = 0.1
 export (float, 0, 1.0) var acceleration = 0.25
 export var respawnpoint: Vector2 = Vector2(0,0)
+export var normalSprite: Texture
 export var runSprite: Texture
 export var gunSprite: Texture
 export var jumpSprite: Texture
@@ -19,9 +20,9 @@ onready var onehp: Sprite = $UI/Control/Node2D/onehp
 onready var twohp: Sprite = $UI/Control/Node2D/twohp
 onready var threehp: Sprite = $UI/Control/Node2D/threehp
 
-func ready():
+func _ready():
 	health = 3
-	
+	$Sprite.texture = normalSprite
 	
 func _physics_process(_delta: float):
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
@@ -36,6 +37,14 @@ func _physics_process(_delta: float):
 		_velocity.x =0
 	if Input.is_action_just_pressed("jump"):
 		dir.y = -1.0
+	#animations
+	if _velocity.x !=0 and is_on_floor():
+		AnimP.play("walk")
+	elif !is_on_floor():
+		AnimP.play("fall")
+	else:
+		AnimP.play("idle")
+
 
 func get_direction() -> Vector2:
 	return Vector2 (
@@ -78,14 +87,17 @@ func switchMode(newMode):
 		1:
 			speed = Vector2(400, 1000)
 			print("jump mode")
+			#sprite.texture = jumpSprite
 		2:
 			pass # run mode
 			speed = Vector2(700,700)
 			print("run mode")
+			#sprite.texture = runSprite
 		3: 
 			pass # attack mode
 			$GUN.visible = true
 			print("attack mode")
+			#sprite.texture = gunSprite
 		4: 
 			pass # BIGMODE
 	if mode !=1 and mode !=2:
