@@ -28,15 +28,17 @@ func damage(dmg):
 	print("enemyhealth:" + String(health))
 	if health<=0:
 		animp.play("die")
+		set_physics_process(false)
+		$hitbox/CollisionShape2D.set_deferred("disabled",false)
+		$CollisionShape2D.set_deferred("disabled",false)
+		$hitbox.set_deferred("monitorable",false)
+		$hitbox.set_deferred("monitoring", false)
 
 func _on_walktimer_timeout():
 	_velocity.x *= -1.0
 	
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "die":
-		set_process(false)
-		$hitbox/CollisionShape2D.disabled = true
-		$CollisionShape2D.disabled = true
 		queue_free()
 	if anim_name != "walk":
 		animp.play("walk")

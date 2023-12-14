@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Art/flying_enemy_spritesheet.png" type="Texture" id=1]
 [ext_resource path="res://src/Scripts/FlyingEnemy.gd" type="Script" id=2]
@@ -42,6 +42,21 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=5]
+resource_name = "die"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Flyingenemy:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 18, 19, 20, 21, 22, 23 ]
+}
+
+[sub_resource type="Animation" id=6]
 resource_name = "fly"
 length = 0.6
 loop = true
@@ -92,7 +107,8 @@ position = Vector2( -1, -18 )
 autoplay = "fly"
 anims/RESET = SubResource( 3 )
 anims/attack = SubResource( 4 )
-anims/fly = SubResource( 5 )
+anims/die = SubResource( 5 )
+anims/fly = SubResource( 6 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

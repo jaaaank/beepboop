@@ -20,8 +20,8 @@ func fireBullet():
 		$shootsound.play()
 		print(abs(player.global_position.x - global_position.x))
 		var b = bullet.instance()
-		get_tree().root.add_child(b)
-		b.position = $muzzle.global_position
+		get_tree().root.get_child(0).add_child(b)
+		b.global_position = $muzzle.global_position
 		b.scale = scale
 		b.rotation_degrees = rotation_degrees
 		cooldown = true

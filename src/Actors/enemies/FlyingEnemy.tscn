@@ -9,7 +9,7 @@ radius = 5.09902
 [sub_resource type="CircleShape2D" id=2]
 radius = 6.0
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Flyingenemy:frame")
@@ -24,7 +24,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 resource_name = "attack"
 length = 0.7
 tracks/0/type = "value"
@@ -40,7 +40,7 @@ tracks/0/keys = {
 "values": [ 12, 13, 14, 15, 16, 17, 18 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 resource_name = "die"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Flyingenemy:frame")
@@ -55,7 +55,7 @@ tracks/0/keys = {
 "values": [ 18, 19, 20, 21, 22, 23 ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=6]
 resource_name = "fly"
 length = 0.6
 loop = true
@@ -100,10 +100,10 @@ shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "fly"
-anims/RESET = SubResource( 4 )
-anims/attack = SubResource( 5 )
-anims/die = SubResource( 6 )
-anims/fly = SubResource( 3 )
+anims/RESET = SubResource( 3 )
+anims/attack = SubResource( 4 )
+anims/die = SubResource( 5 )
+anims/fly = SubResource( 6 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

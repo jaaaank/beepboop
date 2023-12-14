@@ -18,3 +18,7 @@ func _on_Bullet_area_entered(area):
 	if area.get_collision_layer_bit(layer):
 		area.owner.call("damage", 10)
 	queue_free()
+
+
+func _on_Timer_timeout():
+	queue_free()

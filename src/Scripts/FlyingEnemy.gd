@@ -23,8 +23,10 @@ func damage(dmg):
 	print("enemyhealth:" + String(health))
 	if health<=0:
 		set_physics_process(false)
-		$hitbox/CollisionShape2D.disabled = true
-		$CollisionShape2D.disabled = true
+		$hitbox/CollisionShape2D.set_deferred("disabled",false)
+		$CollisionShape2D.set_deferred("disabled",false)
+		$hitbox.set_deferred("monitorable", false)
+		$hitbox.set_deferred("monitoring", false)
 		animp.play("die")
 
 func _on_hitbox_body_entered(body):
