@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=2]
+[gd_scene load_steps=89 format=2]
 
 [ext_resource path="res://src/Actors/ModeSwitcher.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/BeepBoop.tscn" type="PackedScene" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Assets/Art/bipbop.png" type="Texture" id=15]
 [ext_resource path="res://Assets/Art/becca.png" type="Texture" id=16]
 [ext_resource path="res://Assets/Art/adamsdog.jpg" type="Texture" id=17]
+[ext_resource path="res://Assets/Art/dippo.png" type="Texture" id=18]
 
 [sub_resource type="TileSet" id=73]
 0/name = "tilemap.png 0"
@@ -1360,17 +1361,24 @@ scale = Vector2( 3.04201, 0.634746 )
 texture = ExtResource( 15 )
 
 [node name="Realjank" type="Sprite" parent="Bipbop"]
-position = Vector2( 62.13, 3.15112 )
+position = Vector2( 134.122, -1.5752 )
 scale = Vector2( 0.32873, 1.57543 )
 texture = ExtResource( 14 )
 
-[node name="Label" type="Label" parent="Bipbop/Realjank"]
-margin_left = -527.0
-margin_top = 54.0
-margin_right = -289.0
-margin_bottom = 174.0
+[node name="Dippo" type="Sprite" parent="Bipbop/Realjank"]
+position = Vector2( -312.5, 98.2017 )
+scale = Vector2( 0.745613, 0.745613 )
+texture = ExtResource( 18 )
+
+[node name="Label" type="Label" parent="Bipbop/Realjank/Dippo"]
+margin_left = 36.2118
+margin_top = -67.0591
+margin_right = 274.212
+margin_bottom = 52.9409
 rect_scale = Vector2( 0.68, 0.68 )
-text = "welcome to the silly easter egg room"
+text = " <welcome to the silly easter egg room
+my name is dippolodoncus
+like the dinosaur"
 
 [node name="Orangs" type="Sprite" parent="Bipbop"]
 position = Vector2( -95.3318, 4.72656 )
