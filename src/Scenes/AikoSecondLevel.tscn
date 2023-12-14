@@ -494,7 +494,7 @@ points = PoolVector2Array( 40, 80, 0, 80, 0, 0, 40, 0 )
 17/z_index = 0
 
 [node name="TestLevel" type="Node2D"]
-position = Vector2( -41, 1707 )
+position = Vector2( -18, 1888 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
@@ -529,10 +529,10 @@ position = Vector2( 790, -605 )
 position = Vector2( 1618, -2325 )
 
 [node name="BeepBoop" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1843, -2442 )
+position = Vector2( -418, -32 )
 
 [node name="Camera2D" parent="BeepBoop" index="0"]
-limit_bottom = 1780
+limit_bottom = 1980
 
 [node name="jump" type="RichTextLabel" parent="."]
 margin_left = 1124.0
