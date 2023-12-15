@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/to-the-death-159171.mp3-2ef114420994468ee63f9219fd43bc36.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/to-the-death-159171.mp3"
+dest_files=[ "res://.import/to-the-death-159171.mp3-2ef114420994468ee63f9219fd43bc36.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
