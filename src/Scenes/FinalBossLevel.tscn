@@ -2067,6 +2067,13 @@ rotation = 1.5708
 position = Vector2( 4381, -637 )
 rotation = 3.14159
 
+[node name="Spike92" parent="spikes" instance=ExtResource( 7 )]
+position = Vector2( 4381, -774 )
+rotation = 3.14159
+
+[node name="Spike93" parent="spikes" instance=ExtResource( 7 )]
+position = Vector2( 4387, -772 )
+
 [node name="Spike69" parent="spikes" instance=ExtResource( 7 )]
 position = Vector2( 5173, -1279 )
 rotation = 3.14159
@@ -2138,6 +2145,9 @@ position = Vector2( 4489, -467 )
 
 [node name="smPlatform13" parent="platforms" instance=ExtResource( 6 )]
 position = Vector2( 4393, -637 )
+
+[node name="smPlatform36" parent="platforms" instance=ExtResource( 6 )]
+position = Vector2( 4393, -774 )
 
 [node name="smPlatform14" parent="platforms" instance=ExtResource( 6 )]
 position = Vector2( 4592, -640 )
@@ -2442,7 +2452,7 @@ text = "This is it, Beep Boop"
 
 [node name="sceneswitcher" parent="." instance=ExtResource( 21 )]
 position = Vector2( 10609, -504 )
-nextScenePath = "res://src/Scenes/ending.tscnq"
+nextScenePath = "res://src/Scenes/ending.tscn"
 
 [connection signal="body_entered" from="Easter Egg" to="Easter Egg" method="_on_Easter_Egg_body_entered"]
 [connection signal="body_entered" from="returnfromegg" to="returnfromegg" method="_on_returnfromegg_body_entered"]
