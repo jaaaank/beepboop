@@ -1368,6 +1368,11 @@ position = Vector2( 3545, -449 )
 jumpEnabled = false
 runEnabled = false
 
+[node name="ModeSwitcher6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5657, -1848 )
+jumpEnabled = false
+attackEnabled = false
+
 [node name="BeepBoop" parent="." instance=ExtResource( 1 )]
 position = Vector2( 5703, -1876 )
 respawnpoint = Vector2( 34, -33 )
@@ -2158,13 +2163,8 @@ position = Vector2( 4772, -496 )
 [node name="Timer" parent="FlyingEnemy2" index="2"]
 wait_time = 1.0
 
-[node name="ModeSwitcher6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 5657, -1848 )
-jumpEnabled = false
-attackEnabled = false
-
 [node name="sceneswitcher" parent="." instance=ExtResource( 11 )]
-position = Vector2( 8157, -1916 )
+position = Vector2( 8585, -1914 )
 
 [node name="lgPlatform2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 5327, -598 )
@@ -2328,7 +2328,6 @@ position = Vector2( 5506, -1623 )
 [node name="Spike88" parent="smPlatform18" instance=ExtResource( 5 )]
 position = Vector2( -2.00049, 8.00024 )
 rotation = 3.1237
-scale = Vector2( 1, 1 )
 
 [node name="smMovingPlatform17" parent="." instance=ExtResource( 3 )]
 position = Vector2( 5166, -1773 )
@@ -2438,7 +2437,7 @@ position = Vector2( 7426, -2123 )
 position = Vector2( 1, -5 )
 
 [node name="Spike92" parent="." instance=ExtResource( 5 )]
-position = Vector2( 7435, -1552 )
+position = Vector2( 7402, -1554 )
 scale = Vector2( 14.16, 2.28 )
 
 [node name="Turret2" parent="." instance=ExtResource( 12 )]
@@ -2473,10 +2472,15 @@ position = Vector2( 7356, -2524 )
 [editable path="FallingSpike13"]
 [editable path="FallingSpike14"]
 [editable path="FlyingTurretEnemy"]
+[editable path="FlyingTurretEnemy/Turret"]
 [editable path="FlyingTurretEnemy3"]
+[editable path="FlyingTurretEnemy3/Turret"]
 [editable path="FlyingTurretEnemy2"]
+[editable path="FlyingTurretEnemy2/Turret"]
 [editable path="FlyingTurretEnemy4"]
+[editable path="FlyingTurretEnemy4/Turret"]
 [editable path="FlyingTurretEnemy5"]
+[editable path="FlyingTurretEnemy5/Turret"]
 [editable path="FallingSpike15"]
 [editable path="FallingSpike16"]
 [editable path="FallingSpike17"]
@@ -2495,7 +2499,9 @@ position = Vector2( 7356, -2524 )
 [editable path="FlyingTurretEnemy8"]
 [editable path="FlyingTurretEnemy8/Turret"]
 [editable path="FlyingTurretEnemy9"]
+[editable path="FlyingTurretEnemy9/Turret"]
 [editable path="FlyingTurretEnemy10"]
+[editable path="FlyingTurretEnemy10/Turret"]
 [editable path="FlyingEnemy2"]
 [editable path="smMovingPlatform9"]
 [editable path="FlyingEnemy3"]

@@ -2264,6 +2264,7 @@ position = Vector2( 8841, -275 )
 position = Vector2( 8971, -305 )
 
 [node name="PlatformTilemap" type="TileMap" parent="."]
+position = Vector2( 0, -1 )
 tile_set = SubResource( 3 )
 cell_size = Vector2( 40, 40 )
 cell_custom_transform = Transform2D( 40, 0, 0, 40, 0, 0 )
