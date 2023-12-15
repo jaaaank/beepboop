@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://src/Actors/BeepBoop.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/ModeSwitcher.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://src/Actors/enemies/FlyingEnemy.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/Actors/sceneSwitcher.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Assets/Audio/Title screen.mp3" type="AudioStream" id=13]
+[ext_resource path="res://Assets/changetexts.tres" type="Theme" id=14]
 
 [sub_resource type="TileSet" id=19]
 0/name = "tilemap.png 0"
@@ -586,29 +587,13 @@ margin_right = -342.0
 margin_bottom = -54.0
 rect_pivot_offset = Vector2( 172, 34 )
 input_pass_on_modal_close_click = false
+theme = ExtResource( 14 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
 bbcode_text = "[center] Good Luck out there, 
 Beep Boop"
 text = " Good Luck out there, 
 Beep Boop"
-
-[node name="move2" type="RichTextLabel" parent="."]
-margin_left = 2128.0
-margin_top = -3007.0
-margin_right = 2255.0
-margin_bottom = -2936.0
-rect_pivot_offset = Vector2( 172, 34 )
-input_pass_on_modal_close_click = false
-custom_colors/default_color = Color( 1, 1, 1, 1 )
-bbcode_enabled = true
-bbcode_text = "[center] Good Luck out there, 
-Beep Boop"
-text = " Good Luck out there, 
-Beep Boop"
-__meta__ = {
-"_editor_description_": "We will be watching"
-}
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 4 )]
 position = Vector2( 77, -80 )

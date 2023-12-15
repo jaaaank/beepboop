@@ -1718,8 +1718,8 @@ margin_bottom = -1629.0
 theme = ExtResource( 13 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
-bbcode_text = "[center]Almost there, Beep Boop"
-text = "Almost there, Beep Boop"
+bbcode_text = "[center]Halfway there, Beep Boop"
+text = "Halfway there, Beep Boop"
 
 [node name="smPlatform" parent="." instance=ExtResource( 4 )]
 position = Vector2( -779, -1318 )

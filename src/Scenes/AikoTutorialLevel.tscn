@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://src/Actors/BeepBoop.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/ModeSwitcher.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://src/Actors/enemies/Turret.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/Actors/sceneSwitcher.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Assets/Audio/fast.mp3" type="AudioStream" id=13]
+[ext_resource path="res://Assets/changetexts.tres" type="Theme" id=14]
 
 [sub_resource type="TileSet" id=18]
 0/name = "tilemap.png 0"
@@ -643,14 +644,15 @@ respawnpoint = Vector2( 34, -33 )
 limit_right = 6825
 
 [node name="jump" type="RichTextLabel" parent="."]
-margin_left = 505.0
-margin_top = -121.0
-margin_right = 732.0
-margin_bottom = -50.0
+margin_left = 522.0
+margin_top = -138.0
+margin_right = 719.0
+margin_bottom = -51.0
+theme = ExtResource( 14 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
-bbcode_text = "[center]Space to jump"
-text = "Space to jump"
+bbcode_text = "[center]Space to jump, hold  to jump higher"
+text = "Space to jump, hold  to jump higher"
 
 [node name="jump2" type="RichTextLabel" parent="."]
 margin_left = 1523.0
@@ -669,22 +671,41 @@ margin_right = 2046.0
 margin_bottom = -209.0
 rect_scale = Vector2( 1.04516, 1.06595 )
 rect_pivot_offset = Vector2( 102, 0 )
+theme = ExtResource( 14 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]Spikes will kill you instantly"
 text = "Spikes will kill you instantly"
 
 [node name="jump4" type="RichTextLabel" parent="."]
-margin_left = 2547.0
-margin_top = -302.0
-margin_right = 2679.0
-margin_bottom = -231.0
+margin_left = 2524.0
+margin_top = -338.0
+margin_right = 2695.0
+margin_bottom = -256.0
 rect_pivot_offset = Vector2( 102, 0 )
+theme = ExtResource( 14 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]Respawn and Switch modes here~"
 tab_size = 3
 text = "Respawn and Switch modes here~"
+__meta__ = {
+"_editor_description_": "Hello
+"
+}
+
+[node name="jump5" type="RichTextLabel" parent="."]
+margin_left = 2854.0
+margin_top = -343.0
+margin_right = 3025.0
+margin_bottom = -261.0
+rect_pivot_offset = Vector2( 102, 0 )
+theme = ExtResource( 14 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Point and click to shoot"
+tab_size = 3
+text = "Point and click to shoot"
 __meta__ = {
 "_editor_description_": "Hello
 "
@@ -696,6 +717,7 @@ margin_top = -133.0
 margin_right = 271.0
 margin_bottom = -62.0
 input_pass_on_modal_close_click = false
+theme = ExtResource( 14 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]W/D To move"
