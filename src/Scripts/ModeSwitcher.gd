@@ -14,11 +14,11 @@ onready var txt:= $ModeText
 func _ready():
 	txt.bbcode_text = "[center]"
 	if jumpEnabled:
-		txt.bbcode_text += "1 = Jump Mode\n"
+		txt.bbcode_text += "Press 1 for Jump Mode\n"
 	if runEnabled:
-		txt.bbcode_text += "2 = Run Mode\n"
+		txt.bbcode_text += "Press 2 for Run Mode\n"
 	if attackEnabled:
-		txt.bbcode_text += "3 = Attack Mode\n"
+		txt.bbcode_text += "Press 3 for Attack Mode"
 		
 func _input(_event):
 	if Input.is_action_just_pressed("1") and canswitch and jumpEnabled:

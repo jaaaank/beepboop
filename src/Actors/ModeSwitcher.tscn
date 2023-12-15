@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/Scripts/ModeSwitcher.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Art/BigMode_Checkpoint.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Audio/switchmode.wav" type="AudioStream" id=3]
 [ext_resource path="res://Assets/Audio/modswitch.wav" type="AudioStream" id=4]
+[ext_resource path="res://Assets/font.tres" type="DynamicFont" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 14, 19.75 )
@@ -60,11 +61,12 @@ anims/activate = SubResource( 2 )
 
 [node name="ModeText" type="RichTextLabel" parent="."]
 visible = false
-margin_left = -28.0
-margin_top = -80.0
-margin_right = 85.0
-margin_bottom = -13.0
+margin_left = -70.0
+margin_top = -76.0
+margin_right = 213.0
+margin_bottom = 6.0
 rect_scale = Vector2( 0.495611, 0.495611 )
+custom_fonts/normal_font = ExtResource( 5 )
 bbcode_enabled = true
 
 [node name="point" type="Node2D" parent="."]

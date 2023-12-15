@@ -28,7 +28,7 @@ text = "Play"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-volume_db = -6.0
+volume_db = -10.0
 autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
