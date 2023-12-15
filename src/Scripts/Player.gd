@@ -92,7 +92,7 @@ func switchMode(newMode):
 			pass # run mode
 			speed = Vector2(700,700)
 			print("run mode")
-			#sprite.texture = runSprite
+			sprite.texture = runSprite
 		3: 
 			pass # attack mode
 			$GUN.visible = true

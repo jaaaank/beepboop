@@ -1368,7 +1368,7 @@ jumpEnabled = false
 runEnabled = false
 
 [node name="BeepBoop" parent="." instance=ExtResource( 1 )]
-position = Vector2( -674, -1599 )
+position = Vector2( -772, -1602 )
 respawnpoint = Vector2( 34, -33 )
 
 [node name="jump" type="RichTextLabel" parent="."]
