@@ -2283,7 +2283,7 @@ position = Vector2( 4420, -1509 )
 position = Vector2( 6320, -285 )
 
 [node name="BeepBoop" parent="." instance=ExtResource( 2 )]
-position = Vector2( 515, -56 )
+position = Vector2( 131, -105 )
 respawnpoint = Vector2( 34, -33 )
 
 [node name="Camera2D" parent="BeepBoop" index="0"]

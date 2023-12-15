@@ -1,5 +1,6 @@
 extends Actor
-onready var sprite = $Walkingenemyplaceholder
+onready var sprite = $sprite
+onready var animp = $AnimationPlayer
 
 func _ready():
 	speed = Vector2(100,0)
@@ -19,18 +20,25 @@ func _physics_process(delta: float) -> void:
 		
 func _on_hitbox_body_entered(body):
 	if body.get_collision_layer_bit(0):
+		animp.play("attack")
 		body.call("damage", 1)
 
 func damage(dmg):
 	health -= dmg
 	print("enemyhealth:" + String(health))
 	if health<=0:
-		die()
-		
-	
-func die():
-	queue_free()
-
+		animp.play("die")
+		set_physics_process(false)
+		$hitbox/CollisionShape2D.set_deferred("disabled",false)
+		$CollisionShape2D.set_deferred("disabled",false)
+		$hitbox.set_deferred("monitorable",false)
+		$hitbox.set_deferred("monitoring", false)
 
 func _on_walktimer_timeout():
 	_velocity.x *= -1.0
+	
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == "die":
+		queue_free()
+	if anim_name != "walk":
+		animp.play("walk")
