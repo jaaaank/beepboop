@@ -1348,8 +1348,24 @@ scale = Vector2( 1.12, 1 )
 jumpEnabled = false
 runEnabled = false
 
+[node name="ModeSwitcher" parent="." instance=ExtResource( 2 )]
+position = Vector2( -634, -249 )
+jumpEnabled = false
+attackEnabled = false
+
+[node name="ModeSwitcher2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -722, -1568 )
+jumpEnabled = false
+runEnabled = false
+attackEnabled = false
+
+[node name="ModeSwitcher3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3545, -449 )
+jumpEnabled = false
+runEnabled = false
+
 [node name="BeepBoop" parent="." instance=ExtResource( 1 )]
-position = Vector2( 3504, -477 )
+position = Vector2( -722, -1594 )
 respawnpoint = Vector2( 34, -33 )
 
 [node name="jump" type="RichTextLabel" parent="."]
@@ -1361,17 +1377,6 @@ custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]Almost there, Beep Boop"
 text = "Almost there, Beep Boop"
-
-[node name="ModeSwitcher" parent="." instance=ExtResource( 2 )]
-position = Vector2( -634, -249 )
-jumpEnabled = false
-attackEnabled = false
-
-[node name="ModeSwitcher2" parent="." instance=ExtResource( 2 )]
-position = Vector2( -722, -1568 )
-jumpEnabled = false
-runEnabled = false
-attackEnabled = false
 
 [node name="smPlatform" parent="." instance=ExtResource( 4 )]
 position = Vector2( -779, -1318 )
@@ -1881,11 +1886,6 @@ anims/wiggle = SubResource( 76 )
 [node name="Timer" parent="FallingSpike22" index="4"]
 wait_time = 0.1
 
-[node name="ModeSwitcher3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 3545, -449 )
-jumpEnabled = false
-runEnabled = false
-
 [node name="smMovingPlatform6" parent="." instance=ExtResource( 3 )]
 position = Vector2( 3738, -494 )
 scale = Vector2( 1.23998, 1 )
@@ -2081,7 +2081,7 @@ position = Vector2( 3818, -622 )
 [node name="Timer" parent="FlyingTurretEnemy6" index="2"]
 wait_time = 1.0
 
-[node name="LookatPlayer" parent="FlyingTurretEnemy6/Turret" index="2"]
+[node name="LookatPlayer" parent="FlyingTurretEnemy6/Turret" index="1"]
 raynge = 160
 
 [node name="FlyingEnemy" parent="." instance=ExtResource( 9 )]
@@ -2096,7 +2096,7 @@ position = Vector2( 4160, -611 )
 [node name="Timer" parent="FlyingTurretEnemy7" index="2"]
 wait_time = 2.0
 
-[node name="LookatPlayer" parent="FlyingTurretEnemy7/Turret" index="2"]
+[node name="LookatPlayer" parent="FlyingTurretEnemy7/Turret" index="1"]
 raynge = 160
 
 [node name="smPlatform8" parent="." instance=ExtResource( 4 )]
@@ -2117,7 +2117,7 @@ position = Vector2( 4457, -620 )
 [node name="Timer" parent="FlyingTurretEnemy8" index="2"]
 wait_time = 1.0
 
-[node name="LookatPlayer" parent="FlyingTurretEnemy8/Turret" index="2"]
+[node name="LookatPlayer" parent="FlyingTurretEnemy8/Turret" index="1"]
 raynge = 160
 
 [node name="FlyingTurretEnemy9" parent="." instance=ExtResource( 10 )]
