@@ -97,7 +97,7 @@ func switchMode(newMode):
 			pass # attack mode
 			$GUN.visible = true
 			print("attack mode")
-			#sprite.texture = gunSprite
+			sprite.texture = gunSprite
 		4: 
 			pass # BIGMODE
 	if mode !=1 and mode !=2:
