@@ -620,6 +620,8 @@ position = Vector2( 6092, -742 )
 
 [node name="ModeSwitcher2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 5469, -444 )
+runEnabled = false
+attackEnabled = false
 
 [node name="ModeSwitcher" parent="." instance=ExtResource( 2 )]
 position = Vector2( 2703, -205 )
@@ -914,6 +916,12 @@ position = Vector2( 6124, -1590 )
 [node name="sceneswitcher" parent="." instance=ExtResource( 12 )]
 position = Vector2( 6844, -1898 )
 nextScenePath = "res://src/Scenes/AikoSecondLevel.tscn"
+
+[node name="ModeSwitcher3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 79, -3 )
+jumpEnabled = false
+runEnabled = false
+attackEnabled = false
 
 [editable path="FallingSpike"]
 [editable path="FallingSpike2"]

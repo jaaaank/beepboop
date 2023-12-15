@@ -521,12 +521,17 @@ tile_data = PoolIntArray( -5308369, 0, 0, -5308368, 1, 0, -5308367, 1, 0, -53083
 
 [node name="ModeSwitcher" parent="." instance=ExtResource( 2 )]
 position = Vector2( -216, -5 )
+jumpEnabled = false
+runEnabled = false
 
 [node name="ModeSwitcher2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 790, -605 )
+runEnabled = false
+attackEnabled = false
 
 [node name="ModeSwitcher3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1618, -2325 )
+runEnabled = false
 
 [node name="BeepBoop" parent="." instance=ExtResource( 1 )]
 position = Vector2( -418, -32 )
@@ -821,6 +826,7 @@ wait_time = 1.7
 
 [node name="ModeSwitcher4" parent="." instance=ExtResource( 2 )]
 position = Vector2( 2095, -2964 )
+runEnabled = false
 
 [node name="FallingSpike4" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2459, -2738 )
