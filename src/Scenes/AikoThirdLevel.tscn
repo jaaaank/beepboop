@@ -1368,7 +1368,7 @@ jumpEnabled = false
 runEnabled = false
 
 [node name="BeepBoop" parent="." instance=ExtResource( 1 )]
-position = Vector2( 3589, -477 )
+position = Vector2( -674, -1599 )
 respawnpoint = Vector2( 34, -33 )
 
 [node name="jump" type="RichTextLabel" parent="."]
@@ -1463,6 +1463,14 @@ scale = Vector2( 0.79999, 0.88001 )
 
 [node name="Timer" parent="smMovingPlatform3" index="2"]
 wait_time = 1.2
+
+[node name="Spike83" parent="smMovingPlatform3" instance=ExtResource( 5 )]
+position = Vector2( 20.0002, -2.27271 )
+scale = Vector2( 0.653217, 0.590914 )
+
+[node name="Spike84" parent="." instance=ExtResource( 5 )]
+position = Vector2( -728, -818 )
+scale = Vector2( 0.522567, 0.52001 )
 
 [node name="smPlatform4" parent="." instance=ExtResource( 4 )]
 position = Vector2( -754, -814 )
