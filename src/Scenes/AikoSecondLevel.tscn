@@ -550,26 +550,6 @@ position = Vector2( -418, -32 )
 limit_right = 3450
 limit_bottom = 1980
 
-[node name="jump" type="RichTextLabel" parent="."]
-margin_left = 1124.0
-margin_top = 12.0
-margin_right = 1351.0
-margin_bottom = 83.0
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = true
-bbcode_text = "[center]Space to jump"
-text = "Space to jump"
-
-[node name="jump2" type="RichTextLabel" parent="."]
-margin_left = 1763.0
-margin_top = 50.0
-margin_right = 1990.0
-margin_bottom = 121.0
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = true
-bbcode_text = "[center]Holding space will let you jump higher"
-text = "Holding space will let you jump higher"
-
 [node name="jump3" type="RichTextLabel" parent="."]
 margin_left = 2735.0
 margin_top = -36.0

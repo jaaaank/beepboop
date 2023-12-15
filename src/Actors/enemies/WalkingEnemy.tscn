@@ -3,6 +3,7 @@
 [ext_resource path="res://src/Scripts/WalkingEnemy.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Art/walking_enemy_spritesheet.png" type="Texture" id=2]
 
+
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3, 5.33333 )
 
