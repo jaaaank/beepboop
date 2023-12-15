@@ -1,40 +1,65 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/Scripts/LookatPlayer.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Art/gun.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Art/evilturrets.png" type="Texture" id=2]
 [ext_resource path="res://src/Actors/enemies/EnemyBullet.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Scripts/Turret.gd" type="Script" id=4]
 [ext_resource path="res://Assets/Audio/enemyshoot.wav" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 12 )
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 9, 9.5 )
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("GunSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "a"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
 
 [node name="Turret" type="StaticBody2D"]
+scale = Vector2( 2, 2 )
 collision_layer = 4
 collision_mask = 19
 script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -2 )
 shape = SubResource( 1 )
 
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 0, 0.5 )
-shape = SubResource( 2 )
-
 [node name="LookatPlayer" type="Node2D" parent="."]
+position = Vector2( -1, -1 )
 script = ExtResource( 1 )
 bullet = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="LookatPlayer"]
-position = Vector2( 20, 0 )
-scale = Vector2( 0.125, 0.125 )
+position = Vector2( 5, -2 )
 texture = ExtResource( 2 )
+hframes = 6
 
 [node name="cooldowntimer" type="Timer" parent="LookatPlayer"]
 wait_time = 2.0
@@ -42,9 +67,13 @@ one_shot = true
 autostart = true
 
 [node name="muzzle" type="Node2D" parent="LookatPlayer"]
-position = Vector2( 42, -4 )
 
 [node name="shootsound" type="AudioStreamPlayer2D" parent="LookatPlayer"]
 stream = ExtResource( 5 )
+
+[node name="gunanim" type="AnimationPlayer" parent="LookatPlayer"]
+autoplay = "a"
+anims/RESET = SubResource( 2 )
+anims/a = SubResource( 3 )
 
 [connection signal="timeout" from="LookatPlayer/cooldowntimer" to="LookatPlayer" method="fireBullet"]
