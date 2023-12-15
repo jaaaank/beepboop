@@ -1681,7 +1681,6 @@ runEnabled = false
 [node name="ModeSwitcher4" parent="." instance=ExtResource( 2 )]
 position = Vector2( 4319, -486 )
 scale = Vector2( 1.12, 1 )
-jumpEnabled = false
 runEnabled = false
 
 [node name="ModeSwitcher" parent="." instance=ExtResource( 2 )]
@@ -1697,7 +1696,6 @@ attackEnabled = false
 
 [node name="ModeSwitcher3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 3545, -449 )
-jumpEnabled = false
 runEnabled = false
 
 [node name="ModeSwitcher6" parent="." instance=ExtResource( 2 )]
@@ -1706,7 +1704,7 @@ jumpEnabled = false
 attackEnabled = false
 
 [node name="BeepBoop" parent="." instance=ExtResource( 1 )]
-position = Vector2( -776, -1597 )
+position = Vector2( -777, -1602 )
 respawnpoint = Vector2( 34, -33 )
 
 [node name="jump" type="RichTextLabel" parent="."]
@@ -2329,12 +2327,12 @@ wait_time = 1.5
 [node name="Spike88" parent="smMovingPlatform12" instance=ExtResource( 5 )]
 position = Vector2( 32.999, 2 )
 rotation = 1.56859
-scale = Vector2( 0.48, 0.44 )
+scale = Vector2( 0.293, 0.44 )
 
 [node name="Spike91" parent="smMovingPlatform12" instance=ExtResource( 5 )]
 position = Vector2( -32.0005, 2 )
 rotation = -1.58898
-scale = Vector2( 0.48, 0.44 )
+scale = Vector2( 0.293, 0.44 )
 
 [node name="FlyingEnemy5" parent="." instance=ExtResource( 9 )]
 position = Vector2( 5206, -1047 )

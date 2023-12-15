@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Assets/Art/title.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Art/titlescreenyeahtotally.png" type="Texture" id=1]
 [ext_resource path="res://src/Scripts/TitleScreen.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Audio/Title screen.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Assets/changetexts.tres" type="Theme" id=4]
+[ext_resource path="res://Assets/pause.tres" type="DynamicFont" id=5]
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
@@ -20,15 +22,32 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -19.0
-margin_top = 78.0
-margin_right = 19.0
-margin_bottom = 98.0
+margin_left = -59.0
+margin_top = 75.0
+margin_right = -3.99997
+margin_bottom = 106.0
+rect_scale = Vector2( 2.36, 2.36 )
+theme = ExtResource( 4 )
 text = "Play"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -10.0
 autoplay = true
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -489.0
+margin_top = -201.0
+margin_right = 489.0
+margin_bottom = -81.0
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0.580392, 0.901961, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "Beep Boop's Escape"
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

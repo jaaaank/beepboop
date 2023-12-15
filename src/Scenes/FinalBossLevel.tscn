@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=2]
+[gd_scene load_steps=94 format=2]
 
 [ext_resource path="res://src/Actors/ModeSwitcher.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/BeepBoop.tscn" type="PackedScene" id=2]
@@ -19,8 +19,10 @@
 [ext_resource path="res://Assets/Art/adamsdog.jpg" type="Texture" id=17]
 [ext_resource path="res://Assets/Art/dippo.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Audio/to-the-death-159171.mp3" type="AudioStream" id=19]
-[ext_resource path="res://Assets/changetexts.tres" type="Theme" id=20]
-[ext_resource path="res://src/Actors/sceneSwitcher.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Assets/Art/aikothing.jpg" type="Texture" id=20]
+[ext_resource path="res://Assets/Art/20231213_232724.jpg" type="Texture" id=21]
+[ext_resource path="res://src/Actors/sceneSwitcher.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Assets/changetexts.tres" type="Theme" id=23]
 
 [sub_resource type="TileSet" id=73]
 0/name = "tilemap.png 0"
@@ -1388,6 +1390,16 @@ position = Vector2( -95.3318, 4.72656 )
 scale = Vector2( 0.32873, 1.57543 )
 texture = ExtResource( 12 )
 
+[node name="20231213232724" type="Sprite" parent="Bipbop/Orangs"]
+position = Vector2( 826, -9 )
+scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 21 )
+
+[node name="Aikothing" type="Sprite" parent="Bipbop/Orangs/20231213232724"]
+position = Vector2( -5933.34, 3966.66 )
+scale = Vector2( 1.7963, 1.7963 )
+texture = ExtResource( 20 )
+
 [node name="Oombasideeye" type="Sprite" parent="Bipbop"]
 position = Vector2( -51.9394, 1.57568 )
 scale = Vector2( 0.32873, 1.57543 )
@@ -2445,12 +2457,12 @@ margin_left = 1040.0
 margin_top = -93.0
 margin_right = 1267.0
 margin_bottom = -22.0
-theme = ExtResource( 20 )
+theme = ExtResource( 23 )
 bbcode_enabled = true
 bbcode_text = "[center]This is it, Beep Boop"
 text = "This is it, Beep Boop"
 
-[node name="sceneswitcher" parent="." instance=ExtResource( 21 )]
+[node name="sceneswitcher" parent="." instance=ExtResource( 22 )]
 position = Vector2( 10609, -504 )
 nextScenePath = "res://src/Scenes/ending.tscn"
 
