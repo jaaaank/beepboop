@@ -12,6 +12,6 @@ func _physics_process(delta):
 			get_tree().change_scene(nextScenePath)
 	
 
-func _on_sceneswitcher_body_entered(body):
+func _on_sceneswitcher_body_entered(_body):
 	set_physics_process(true)
 

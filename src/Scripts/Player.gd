@@ -87,7 +87,7 @@ func switchMode(newMode):
 		1:
 			speed = Vector2(400, 1000)
 			print("jump mode")
-			#sprite.texture = jumpSprite
+			sprite.texture = jumpSprite
 		2:
 			pass # run mode
 			speed = Vector2(700,700)
@@ -112,7 +112,7 @@ func die():
 	global_position = respawnpoint
 	health = 3
 	updateinterface()
-	#queue_free()
+	#	queue_free()
 	
 func updateinterface():
 	match health:

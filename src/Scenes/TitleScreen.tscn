@@ -4,7 +4,7 @@
 [ext_resource path="res://src/Scripts/TitleScreen.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Audio/Title screen.mp3" type="AudioStream" id=3]
 [ext_resource path="res://Assets/changetexts.tres" type="Theme" id=4]
-[ext_resource path="res://Assets/pause.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Assets/title.tres" type="DynamicFont" id=5]
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
@@ -41,12 +41,10 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -489.0
-margin_top = -201.0
+margin_top = -282.0
 margin_right = 489.0
-margin_bottom = -81.0
-theme = ExtResource( 4 )
+margin_bottom = -162.0
 custom_colors/font_color = Color( 0.580392, 0.901961, 1, 1 )
-custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_fonts/font = ExtResource( 5 )
 text = "Beep Boop's Escape"
 
