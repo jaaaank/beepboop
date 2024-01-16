@@ -647,12 +647,12 @@ limit_right = 6825
 margin_left = 522.0
 margin_top = -138.0
 margin_right = 719.0
-margin_bottom = -51.0
+margin_bottom = -25.0
 theme = ExtResource( 14 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
-bbcode_text = "[center]Space to jump, hold  to jump higher"
-text = "Space to jump, hold  to jump higher"
+bbcode_text = "[center]Space or up arrow to jump, hold  to jump higher"
+text = "Space or up arrow to jump, hold  to jump higher"
 
 [node name="jump2" type="RichTextLabel" parent="."]
 margin_left = 1523.0
@@ -714,14 +714,14 @@ __meta__ = {
 [node name="move" type="RichTextLabel" parent="."]
 margin_left = 44.0
 margin_top = -133.0
-margin_right = 271.0
+margin_right = 327.0
 margin_bottom = -62.0
 input_pass_on_modal_close_click = false
 theme = ExtResource( 14 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
-bbcode_text = "[center]W/D To move"
-text = "W/D To move"
+bbcode_text = "[center]A/D or arrow keys to move"
+text = "A/D or arrow keys to move"
 
 [node name="Spike" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1941, -120 )
@@ -790,10 +790,13 @@ position = Vector2( 4284, -438 )
 position = Vector2( 3949, -399 )
 
 [node name="WalkingEnemy3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 3804, -302 )
+position = Vector2( 3804, -287 )
+
+[node name="hitbox" parent="WalkingEnemy3" index="2"]
+position = Vector2( 0, 2.66666 )
 
 [node name="CollisionShape2D" parent="WalkingEnemy3/hitbox" index="0"]
-position = Vector2( 1, 18 )
+position = Vector2( 0, 0 )
 
 [node name="walktimer" parent="WalkingEnemy3" index="3"]
 wait_time = 1.0
