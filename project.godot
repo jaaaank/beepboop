@@ -30,6 +30,10 @@ config/name="beepboop"
 run/main_scene="res://src/Scenes/TitleScreen.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+CrazySdk="*res://src/Scripts/CrazySDK.gd"
+
 [editor_plugins]
 
 enabled=PoolStringArray( "res://addons/godot_icon/plugin.cfg" )

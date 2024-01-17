@@ -643,6 +643,12 @@ respawnpoint = Vector2( 34, -33 )
 [node name="Camera2D" parent="BeepBoop" index="0"]
 limit_right = 6825
 
+[node name="VBoxContainer" parent="BeepBoop/UI/PauseMenu" index="1"]
+pause_mode = 2
+
+[node name="RsuemButton" parent="BeepBoop/UI/PauseMenu/VBoxContainer" index="0"]
+pause_mode = 2
+
 [node name="jump" type="RichTextLabel" parent="."]
 margin_left = 522.0
 margin_top = -138.0

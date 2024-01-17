@@ -17,18 +17,38 @@ anchor_bottom = 1.0
 texture = ExtResource( 1 )
 expand = true
 
-[node name="Button" type="Button" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -59.0
-margin_top = 75.0
-margin_right = -3.99997
-margin_bottom = 106.0
-rect_scale = Vector2( 2.36, 2.36 )
+margin_left = -74.0
+margin_top = -47.0
+margin_right = 74.0
+margin_bottom = 120.0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_right = 148.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
 theme = ExtResource( 4 )
 text = "Play"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+margin_top = 54.0
+margin_right = 148.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 0, 50 )
+theme = ExtResource( 4 )
+text = "Credits"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+margin_top = 108.0
+margin_right = 148.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 0, 50 )
+theme = ExtResource( 4 )
+text = "Dippo Studios"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
@@ -48,4 +68,6 @@ custom_colors/font_color = Color( 0.580392, 0.901961, 1, 1 )
 custom_fonts/font = ExtResource( 5 )
 text = "Beep Boop's Escape"
 
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_Button2_pressed"]
