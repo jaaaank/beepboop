@@ -112,7 +112,6 @@ func die():
 	global_position = respawnpoint
 	health = 3
 	updateinterface()
-	#	queue_free()
 	
 func updateinterface():
 	match health:

@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var route = get_tree().root.get_child(1).name
+onready var route = get_tree().root.get_child(2).name
 onready var player = get_tree().root.get_node(route + "/BeepBoop")
 export (PackedScene) var bullet
 onready var gun = $GunSprite

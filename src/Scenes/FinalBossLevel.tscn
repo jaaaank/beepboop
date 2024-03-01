@@ -2464,7 +2464,7 @@ text = "This is it, Beep Boop"
 
 [node name="sceneswitcher" parent="." instance=ExtResource( 22 )]
 position = Vector2( 10609, -504 )
-nextScenePath = "res://src/Scenes/ending.tscn"
+levelToUnlock = 3
 
 [connection signal="body_entered" from="Easter Egg" to="Easter Egg" method="_on_Easter_Egg_body_entered"]
 [connection signal="body_entered" from="returnfromegg" to="returnfromegg" method="_on_returnfromegg_body_entered"]

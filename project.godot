@@ -33,6 +33,7 @@ config/icon="res://icon.png"
 [autoload]
 
 CrazySdk="*res://src/Scripts/CrazySDK.gd"
+Autoload="*res://src/Scripts/autoload.gd"
 
 [editor_plugins]
 

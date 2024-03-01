@@ -947,7 +947,7 @@ position = Vector2( 6124, -1590 )
 
 [node name="sceneswitcher" parent="." instance=ExtResource( 12 )]
 position = Vector2( 6844, -1898 )
-nextScenePath = "res://src/Scenes/AikoSecondLevel.tscn"
+levelToUnlock = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )

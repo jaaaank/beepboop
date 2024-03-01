@@ -1860,25 +1860,25 @@ position = Vector2( -845, -341 )
 rotation = 0.673091
 
 [node name="Spike12" parent="." instance=ExtResource( 5 )]
-position = Vector2( -804, -245 )
+position = Vector2( -835, -245 )
 
 [node name="Spike11" parent="." instance=ExtResource( 5 )]
-position = Vector2( -774, -244 )
+position = Vector2( -805, -244 )
 
 [node name="Spike13" parent="." instance=ExtResource( 5 )]
-position = Vector2( -293, -243 )
+position = Vector2( -290, -243 )
 
 [node name="Spike14" parent="." instance=ExtResource( 5 )]
-position = Vector2( -253, -243 )
+position = Vector2( -252, -243 )
 
 [node name="Spike15" parent="." instance=ExtResource( 5 )]
-position = Vector2( -213, -243 )
+position = Vector2( -214, -243 )
 
 [node name="Spike16" parent="." instance=ExtResource( 5 )]
 position = Vector2( -176, -243 )
 
 [node name="Spike20" parent="." instance=ExtResource( 5 )]
-position = Vector2( -140, -244 )
+position = Vector2( -138, -243 )
 
 [node name="Spike18" parent="." instance=ExtResource( 5 )]
 position = Vector2( -252, -404 )
@@ -1891,7 +1891,7 @@ rotation = 3.14328
 scale = Vector2( 1.19408, 0.660681 )
 
 [node name="Spike51" parent="." instance=ExtResource( 5 )]
-position = Vector2( -175, -404 )
+position = Vector2( -178, -404 )
 rotation = 3.14328
 scale = Vector2( 1.19408, 0.660681 )
 
@@ -2228,7 +2228,7 @@ wait_time = 1.0
 
 [node name="sceneswitcher" parent="." instance=ExtResource( 11 )]
 position = Vector2( 8585, -1914 )
-nextScenePath = "res://src/Scenes/FinalBossLevel.tscn"
+levelToUnlock = 3
 
 [node name="lgPlatform2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 5327, -598 )

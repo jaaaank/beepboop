@@ -954,7 +954,7 @@ wait_time = 1.5
 
 [node name="sceneswitcher" parent="." instance=ExtResource( 12 )]
 position = Vector2( 3489, -1959 )
-nextScenePath = "res://src/Scenes/AikoThirdLevel.tscn"
+levelToUnlock = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )

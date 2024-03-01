@@ -1,17 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://src/Scripts/LevelSelect.gd" type="Script" id=1]
-
-[sub_resource type="GDScript" id=1]
-script/source = "extends Button
-
-
-export var levelPath: String
-
-
-func _on_Lvl1button_pressed():
-	get_tree().change_scene(levelPath)
-"
 
 [node name="LevelSelect" type="Control"]
 anchor_right = 1.0
@@ -22,15 +11,6 @@ script = ExtResource( 1 )
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="Lvl1button" type="Button" parent="."]
-margin_left = 106.0
-margin_top = 180.0
-margin_right = 164.0
-margin_bottom = 200.0
-text = "Level 1"
-script = SubResource( 1 )
-levelPath = "res://src/Scenes/AikoTutorialLevel.tscn"
-
 [node name="MenuButton" type="Button" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -38,4 +18,4 @@ margin_top = -20.0
 margin_right = 12.0
 text = "Return To Menu"
 
-[connection signal="pressed" from="Lvl1button" to="Lvl1button" method="_on_Lvl1button_pressed"]
+[connection signal="pressed" from="MenuButton" to="." method="_on_MenuButton_pressed"]

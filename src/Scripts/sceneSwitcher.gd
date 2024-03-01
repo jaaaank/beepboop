@@ -1,6 +1,6 @@
 extends Area2D
 
-export var nextScenePath: String  = ""
+export var levelToUnlock: int
 
 
 func _ready():
@@ -9,7 +9,8 @@ func _ready():
 func _physics_process(delta):
 	$CanvasLayer/ColorRect.color.a += .75 * delta
 	if $CanvasLayer/ColorRect.color.a >= 2:
-			get_tree().change_scene(nextScenePath)
+			get_tree().change_scene("res://src/Scenes/LevelSelect.tscn")
+			Autoload.levelsUnlocked[levelToUnlock] = true
 	
 
 func _on_sceneswitcher_body_entered(_body):
