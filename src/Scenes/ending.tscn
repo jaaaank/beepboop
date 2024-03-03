@@ -26,6 +26,7 @@ func _ready():
 
 func _on_Button_pressed():
 	get_tree().change_scene(\"res://src/Scenes/TitleScreen.tscn\")
+	Autoload.levelsUnlocked = [true,true, true, true]
 "
 
 [node name="Control" type="Control"]

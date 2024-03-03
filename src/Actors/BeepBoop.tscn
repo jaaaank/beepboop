@@ -166,6 +166,7 @@ bullet = ExtResource( 5 )
 
 [node name="Lasershoot" type="AudioStreamPlayer" parent="GUN"]
 stream = ExtResource( 8 )
+volume_db = -5.0
 
 [node name="GunSprite" type="Sprite" parent="GUN"]
 position = Vector2( -14, 0 )

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/Scripts/LevelSelect.gd" type="Script" id=1]
 [ext_resource path="res://Assets/changetexts.tres" type="Theme" id=2]
 [ext_resource path="res://Assets/Art/titlescreenyeahtotally.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Audio/Title screen.mp3" type="AudioStream" id=4]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Button
@@ -105,6 +106,11 @@ margin_bottom = -39.0
 rect_scale = Vector2( 2, 2 )
 theme = ExtResource( 2 )
 text = "Return To Menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
+autoplay = true
 
 [connection signal="pressed" from="Lvl1button" to="Lvl1button" method="_on_Lvl1button_pressed"]
 [connection signal="pressed" from="lvl2button" to="lvl2button" method="_on_Lvl1button_pressed"]
