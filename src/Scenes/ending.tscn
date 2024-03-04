@@ -57,10 +57,10 @@ uppercase = true
 [node name="Label3" type="Label" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 16.0
-margin_top = -242.0
-margin_right = 1723.0
-margin_bottom = 247.0
+margin_left = 7.0
+margin_top = -126.0
+margin_right = 1714.0
+margin_bottom = 363.0
 rect_scale = Vector2( 0.3, 0.3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
