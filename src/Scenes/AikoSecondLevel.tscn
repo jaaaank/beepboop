@@ -763,19 +763,11 @@ position = Vector2( 2034, -2557 )
 [node name="Timer" parent="FlyingTurretEnemy2" index="2"]
 wait_time = 1.5
 
-[node name="smPlatform4" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1998, -2505 )
-rotation = -1.17718
-scale = Vector2( -0.967231, 0.953277 )
-
 [node name="Spike10" parent="." instance=ExtResource( 3 )]
 position = Vector2( 2141, -2478 )
 
-[node name="Spike11" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2024, -2389 )
-
 [node name="WalkingEnemy3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 2067, -2426 )
+position = Vector2( 2036, -2422 )
 
 [node name="walktimer" parent="WalkingEnemy3" index="3"]
 wait_time = 0.5
