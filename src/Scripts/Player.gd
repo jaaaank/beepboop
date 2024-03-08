@@ -7,6 +7,7 @@ export var normalSprite: Texture
 export var runSprite: Texture
 export var gunSprite: Texture
 export var jumpSprite: Texture
+export var deathSprite: Texture
 
 #0 = normal mode
 #1 = jump mode (moves a bit faster and jumps much higher)
@@ -19,6 +20,8 @@ onready var AnimP: = $AnimationPlayer
 onready var onehp: Sprite = $UI/Control/Node2D/onehp
 onready var twohp: Sprite = $UI/Control/Node2D/twohp
 onready var threehp: Sprite = $UI/Control/Node2D/threehp
+
+var dead:bool = false
 
 func _ready():
 	health = 3
@@ -73,17 +76,20 @@ func calculate_move_velocity(
 #			_velocity.x = 3000
 
 func damage(dmg):
-	health -=dmg
-	updateinterface()
-	$beepdamaged.play()
-	if health <= 0:
-		die()
+	if !dead:
+		health -=dmg
+		updateinterface()
+		$beepdamaged.play()
+		if health <= 0:
+			die()
 	
 func switchMode(newMode):
 	mode = newMode
 	match mode:
 		0:
-			pass # normal mode
+			speed = Vector2(350, 700)
+			sprite.texture = normalSprite
+			$GUN.visible = false
 		1:
 			speed = Vector2(400, 1000)
 			print("jump mode")
@@ -109,6 +115,19 @@ func switchMode(newMode):
 	print(mode)
 	
 func die():
+	Autoload.deaths +=1
+	dead = true
+	$Sprite.texture = deathSprite
+	AnimP.play("death")
+	set_physics_process(false)
+	set_process_input(false)
+	$diesound.play()
+	
+func respawn():
+	dead = false
+	switchMode(0)
+	set_process_input(true)
+	set_physics_process(true)
 	global_position = respawnpoint
 	health = 3
 	updateinterface()

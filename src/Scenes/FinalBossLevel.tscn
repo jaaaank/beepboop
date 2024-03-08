@@ -1457,22 +1457,18 @@ scale = Vector2( 481.981, 0.847864 )
 [node name="ModeSwitcher5" parent="." instance=ExtResource( 1 )]
 position = Vector2( 4633, -2085 )
 rotation = -0.00900629
-scale = Vector2( 2, 2 )
 
 [node name="Spike3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 5040, -1962 )
 rotation = -0.0209325
-scale = Vector2( 1, 1 )
 
 [node name="Spike4" parent="." instance=ExtResource( 7 )]
 position = Vector2( 5312, -1961 )
 rotation = -0.0209325
-scale = Vector2( 1, 1 )
 
 [node name="Spike2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 5001, -1961 )
 rotation = -0.0209325
-scale = Vector2( 1, 1 )
 
 [node name="Spike" parent="Spike2" instance=ExtResource( 7 )]
 position = Vector2( 199.956, 4.1864 )
@@ -1495,17 +1491,14 @@ position = Vector2( 274.94, 5.7561 )
 [node name="lgPlatform" parent="." instance=ExtResource( 5 )]
 position = Vector2( 5302, -2023 )
 rotation = -0.0209325
-scale = Vector2( 1, 1 )
 
 [node name="Spike5" parent="." instance=ExtResource( 7 )]
 position = Vector2( 5360, -2028 )
 rotation = -0.0235749
-scale = Vector2( 1, 1 )
 
 [node name="Spike" parent="." instance=ExtResource( 7 )]
 position = Vector2( 3240, -1842 )
 rotation = -1.54903
-scale = Vector2( 1, 1 )
 
 [node name="fallingspikes" type="Node" parent="."]
 
