@@ -868,10 +868,10 @@ position = Vector2( 4643, -440 )
 position = Vector2( 4807, -441 )
 
 [node name="Spike10" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4843, -441 )
+position = Vector2( 4839, -441 )
 
 [node name="Spike11" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4881, -441 )
+position = Vector2( 4874, -441 )
 
 [node name="FlyingTurretEnemy3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 4841, -606 )

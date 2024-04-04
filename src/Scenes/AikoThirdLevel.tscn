@@ -1725,24 +1725,6 @@ position = Vector2( 6935, -2373 )
 [node name="FallingSpike40" parent="." instance=ExtResource( 8 )]
 position = Vector2( 6976, -2411 )
 
-[node name="FallingSpike26" parent="." instance=ExtResource( 8 )]
-position = Vector2( 7369, -2659 )
-
-[node name="Sensor" parent="FallingSpike26" index="2"]
-position = Vector2( -239, 318 )
-
-[node name="Timer" parent="FallingSpike26" index="4"]
-wait_time = 0.5
-
-[node name="FallingSpike27" parent="." instance=ExtResource( 8 )]
-position = Vector2( 7479, -2656 )
-
-[node name="Sensor" parent="FallingSpike27" index="2"]
-position = Vector2( -313, 315 )
-
-[node name="Timer" parent="FallingSpike27" index="4"]
-wait_time = 0.5
-
 [node name="jump" type="RichTextLabel" parent="."]
 margin_left = -792.0
 margin_top = -1700.0
@@ -1900,18 +1882,6 @@ position = Vector2( -835, -245 )
 
 [node name="Spike11" parent="." instance=ExtResource( 5 )]
 position = Vector2( -805, -244 )
-
-[node name="FlyingTurretEnemy" parent="." instance=ExtResource( 10 )]
-position = Vector2( 493, -461 )
-
-[node name="Timer" parent="FlyingTurretEnemy" index="2"]
-wait_time = 2.0
-
-[node name="FlyingTurretEnemy3" parent="." instance=ExtResource( 10 )]
-position = Vector2( 769, -459 )
-
-[node name="Timer" parent="FlyingTurretEnemy3" index="2"]
-wait_time = 2.0
 
 [node name="FlyingTurretEnemy2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1100, -458 )
@@ -2314,9 +2284,6 @@ scale = Vector2( 0.197544, 0.296653 )
 [node name="FlyingEnemy5" parent="." instance=ExtResource( 9 )]
 position = Vector2( 5206, -1047 )
 
-[node name="FlyingEnemy6" parent="." instance=ExtResource( 9 )]
-position = Vector2( 5506, -1068 )
-
 [node name="smMovingPlatform11" parent="." instance=ExtResource( 3 )]
 position = Vector2( 5194, -1098 )
 
@@ -2470,8 +2437,6 @@ autoplay = true
 [editable path="FallingSpike20"]
 [editable path="FallingSpike21"]
 [editable path="FallingSpike22"]
-[editable path="FallingSpike26"]
-[editable path="FallingSpike27"]
 [editable path="smMovingPlatform"]
 [editable path="smMovingPlatform2"]
 [editable path="Spike2"]
@@ -2479,10 +2444,6 @@ autoplay = true
 [editable path="smMovingPlatform4"]
 [editable path="smMovingPlatform5"]
 [editable path="smMovingPlatform7"]
-[editable path="FlyingTurretEnemy"]
-[editable path="FlyingTurretEnemy/Turret"]
-[editable path="FlyingTurretEnemy3"]
-[editable path="FlyingTurretEnemy3/Turret"]
 [editable path="FlyingTurretEnemy2"]
 [editable path="FlyingTurretEnemy2/Turret"]
 [editable path="FlyingTurretEnemy4"]
