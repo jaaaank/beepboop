@@ -1,6 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/Scripts/TheCore.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Art/realjank.png" type="Texture" id=2]
+[ext_resource path="res://Assets/changetexts.tres" type="Theme" id=3]
+[ext_resource path="res://Assets/font.tres" type="DynamicFont" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 51.1566
@@ -14,7 +17,7 @@ bg_color = Color( 0.513726, 0.054902, 0.054902, 1 )
 collision_layer = 4
 collision_mask = 27
 script = ExtResource( 1 )
-health = 15.0
+health = 150.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -24,13 +27,45 @@ shape = SubResource( 1 )
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -142.0
-margin_top = 31.0
-margin_right = 142.0
-margin_bottom = 45.0
+margin_left = -150.0
+margin_top = 72.0
+margin_right = 150.0
+margin_bottom = 98.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 150, 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 4 )
 custom_styles/fg = SubResource( 2 )
 custom_styles/bg = SubResource( 3 )
 step = 1.0
 value = 100.0
 rounded = true
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -250.0
+margin_top = 24.0
+margin_right = 250.0
+margin_bottom = 50.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 250, 13 )
+theme = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]CORE HEALTH:"
+text = "CORE HEALTH:"
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1.90735e-06, 2.86102e-06 )
+scale = Vector2( 0.686747, 0.686747 )
+texture = ExtResource( 2 )
+
+[node name="FullTimer" type="Timer" parent="."]
+wait_time = 60.0
+
+[node name="SecTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="FullTimer" to="." method="_on_FullTimer_timeout"]
+[connection signal="timeout" from="SecTimer" to="." method="_on_SecTimer_timeout"]

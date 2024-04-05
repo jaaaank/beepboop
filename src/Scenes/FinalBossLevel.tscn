@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=2]
+[gd_scene load_steps=96 format=2]
 
 [ext_resource path="res://src/Actors/ModeSwitcher.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/BeepBoop.tscn" type="PackedScene" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://Assets/Art/20231213_232724.jpg" type="Texture" id=21]
 [ext_resource path="res://src/Actors/sceneSwitcher.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Assets/changetexts.tres" type="Theme" id=23]
+[ext_resource path="res://src/Actors/enemies/TheCore.tscn" type="PackedScene" id=24]
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 40, 40, 0, 40, 0, 0, 40, 0 )
@@ -2532,6 +2533,9 @@ script = SubResource( 78 )
 
 [node name="FallingSpike" parent="." instance=ExtResource( 4 )]
 position = Vector2( 5122, -2169 )
+
+[node name="TheCore" parent="." instance=ExtResource( 24 )]
+position = Vector2( 1485, -132 )
 
 [connection signal="body_entered" from="Easter Egg" to="Easter Egg" method="_on_Easter_Egg_body_entered"]
 [connection signal="body_entered" from="returnfromegg" to="returnfromegg" method="_on_returnfromegg_body_entered"]
