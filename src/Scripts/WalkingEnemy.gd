@@ -25,7 +25,6 @@ func _on_hitbox_body_entered(body):
 
 func damage(dmg):
 	health -= dmg
-	print("enemyhealth:" + String(health))
 	if health<=0:
 		animp.play("die")
 		set_physics_process(false)
