@@ -1,14 +1,14 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://src/Scripts/TheCore.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Art/realjank.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Art/BossCore.png" type="Texture" id=2]
 [ext_resource path="res://Assets/changetexts.tres" type="Theme" id=3]
 [ext_resource path="res://Assets/font.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Assets/Art/laser.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Audio/facexplosion.wav" type="AudioStream" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 51.1566
+radius = 54.0093
 
 [sub_resource type="CapsuleShape2D" id=4]
 radius = 17.0
@@ -18,6 +18,38 @@ height = 458.0
 bg_color = Color( 0.513726, 0.054902, 0.054902, 1 )
 
 [sub_resource type="StyleBoxFlat" id=3]
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "agh"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 0.55, 0.55 ), Vector2( 0.5, 0.5 ) ]
+}
 
 [node name="TheCore" type="KinematicBody2D"]
 collision_layer = 4
@@ -81,7 +113,7 @@ color = Color( 1, 1, 1, 0 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 1.90735e-06, 2.86102e-06 )
-scale = Vector2( 0.686747, 0.686747 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="FullTimer" type="Timer" parent="."]
@@ -93,6 +125,11 @@ one_shot = true
 [node name="explosionsound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
 volume_db = -10.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "agh"
+anims/RESET = SubResource( 6 )
+anims/agh = SubResource( 5 )
 
 [connection signal="body_entered" from="Laser" to="." method="_on_Laser_body_entered"]
 [connection signal="timeout" from="FullTimer" to="." method="_on_FullTimer_timeout"]

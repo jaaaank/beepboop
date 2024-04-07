@@ -26,7 +26,7 @@ func _ready():
 
 func _on_Button_pressed():
 	get_tree().change_scene(\"res://src/Scenes/TitleScreen.tscn\")
-	Autoload.levelsUnlocked = [true,true, true, true]
+	Autoload.levelsUnlocked = [true,true, true, true, true]
 "
 
 [sub_resource type="GDScript" id=2]

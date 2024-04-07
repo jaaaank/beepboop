@@ -115,7 +115,7 @@ theme = ExtResource( 2 )
 text = "Level 5"
 script = SubResource( 1 )
 levelNum = 4
-levelPath = "res://src/Scenes/FinalBossLevel.tscn"
+levelPath = "res://src/Scenes/CoreBossLevelFinale.tscn"
 
 [node name="MenuButton" type="Button" parent="."]
 anchor_top = 1.0

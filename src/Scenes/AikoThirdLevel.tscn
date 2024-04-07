@@ -1930,14 +1930,14 @@ position = Vector2( 3154, -286 )
 position = Vector2( 3117, -285 )
 
 [node name="smMovingPlatform6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3738, -494 )
+position = Vector2( 3743, -480 )
 scale = Vector2( 1.23998, 1 )
 
 [node name="Timer" parent="smMovingPlatform6" index="2"]
 wait_time = 5.0
 
 [node name="smMovingPlatform8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4396, -493 )
+position = Vector2( 4396, -480 )
 scale = Vector2( 1.23998, 1 )
 
 [node name="Timer" parent="smMovingPlatform8" index="2"]

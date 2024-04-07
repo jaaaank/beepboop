@@ -2534,12 +2534,11 @@ anims/wiggle = SubResource( 157 )
 wait_time = 1.0
 
 [node name="BeepBoop" parent="." instance=ExtResource( 2 )]
-position = Vector2( 282, -1111 )
+position = Vector2( 11126, -1528 )
 respawnpoint = Vector2( 34, -33 )
 
 [node name="Camera2D" parent="BeepBoop" index="0"]
 position = Vector2( 1, -11 )
-zoom = Vector2( 0.6, 0.55 )
 limit_left = 0
 limit_right = 11400
 limit_bottom = 70

@@ -8,9 +8,10 @@ var ded:bool = false
 var red:bool = true
 
 signal murked
+func _ready():
+	connect("murked", get_parent().find_node("doorthatsdefnotjustaplatform"), "open")
 
 func _physics_process(delta):
-	connect("murked", get_parent().find_node("doorthatsdefnotjustaplatform"), "open")
 	if get_node_or_null("Laser"):
 		$Laser.rotate(.75*delta)
 	if ded: 
@@ -22,10 +23,15 @@ func damage(dmg):
 	health -= dmg
 	$CanvasLayer/ProgressBar.value = health/150*100
 	if health <= 0:
+		set_collision_mask_bit(0, false)
+		set_collision_mask_bit(1, false)
+		set_collision_mask_bit(3, false)
+		set_collision_layer_bit(2, false)
+		$CollisionShape2D.disabled = true
 		emit_signal("murked")
 		$explosionsound.play()
 		$Laser.queue_free()
-		$CanvasLayer/ProgressBar.queue_free()
+		$CanvasLayer/ProgressBar.visible = false
 		$FullTimer.start(60)
 		$SecTimer.start(1)
 		$CanvasLayer/Label.bbcode_text = "[center][color=#ff2d00]TIME LEFT UNTIL FACTORY SELF-DESTRUCT: 60[/color]"

@@ -19,4 +19,5 @@ func _on_RsuemButton_button_down():
 
 
 func _on_menuButton_pressed():
+	set_paused(!paused)
 	get_tree().change_scene("res://src/Scenes/TitleScreen.tscn")

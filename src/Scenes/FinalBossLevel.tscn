@@ -2505,7 +2505,7 @@ text = "This is it, Beep Boop"
 
 [node name="sceneswitcher" parent="." instance=ExtResource( 22 )]
 position = Vector2( 10609, -504 )
-levelToUnlock = 5
+levelToUnlock = 4
 
 [node name="FallingSpike" parent="." instance=ExtResource( 4 )]
 position = Vector2( 5122, -2169 )
