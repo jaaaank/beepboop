@@ -298,6 +298,10 @@ volume_db = -5.0
 [node name="diesound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 16 )
 
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
 [connection signal="timeout" from="GUN/cooldowntimer" to="GUN" method="_on_cooldowntimer_timeout"]
 [connection signal="button_down" from="UI/PauseMenu/VBoxContainer/RsuemButton" to="UI/PauseMenu" method="_on_RsuemButton_button_down"]
 [connection signal="pressed" from="UI/PauseMenu/VBoxContainer/menuButton" to="UI/PauseMenu" method="_on_menuButton_pressed"]

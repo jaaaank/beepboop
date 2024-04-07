@@ -28,18 +28,19 @@ func _ready():
 	$Sprite.texture = normalSprite
 	
 func _physics_process(_delta: float):
+	var was_on_floor:bool = is_on_floor()
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
 	var dir: = get_direction() 
 	_velocity = calculate_move_velocity(_velocity, dir, speed, is_jump_interrupted)
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
+	if was_on_floor and !is_on_floor():
+		$CoyoteTimer.start()
 	if _velocity.x< 0:
 		sprite.flip_h = true
 	elif _velocity.x> 0:
 		sprite.flip_h = false
 	if not Input.is_action_pressed("moveLeft") and not Input.is_action_pressed("moveRight"):
 		_velocity.x =0
-	if Input.is_action_just_pressed("jump"):
-		dir.y = -1.0
 	#animations
 	if _velocity.x !=0 and is_on_floor():
 		AnimP.play("walk")
@@ -52,7 +53,7 @@ func _physics_process(_delta: float):
 func get_direction() -> Vector2:
 	return Vector2 (
 		Input.get_action_strength("moveRight") - Input.get_action_strength("moveLeft"), 
-		-1.0 if Input.is_action_just_pressed("jump") and is_on_floor() else 1.0)
+		-1.0 if Input.is_action_just_pressed("jump") and (is_on_floor() or !$CoyoteTimer.is_stopped()) else 1.0)
 
 func calculate_move_velocity(
 		linear_velocity: Vector2,
