@@ -1378,7 +1378,7 @@ respawnpoint = Vector2( 34, -33 )
 
 [node name="Camera2D" parent="BeepBoop" index="0"]
 limit_left = -1750
-limit_right = 8400
+limit_right = 8120
 
 [node name="Spike18" parent="." instance=ExtResource( 5 )]
 position = Vector2( -252, -404 )

@@ -576,7 +576,7 @@ custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
 bbcode_text = "[center] Good Luck out there, 
 Beep Boop"
-text = " Good Luck out there, 
+text = "[center] Good Luck out there, 
 Beep Boop"
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 4 )]

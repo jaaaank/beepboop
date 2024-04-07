@@ -273,16 +273,23 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -44.0
-margin_top = -20.0
-margin_right = 44.0
-margin_bottom = 20.0
+margin_left = -86.0
+margin_top = -33.0
+margin_right = 86.0
+margin_bottom = 33.0
 
 [node name="RsuemButton" type="Button" parent="UI/PauseMenu/VBoxContainer"]
-margin_right = 88.0
+margin_right = 172.0
 margin_bottom = 31.0
 theme = ExtResource( 13 )
 text = "Resume"
+
+[node name="menuButton" type="Button" parent="UI/PauseMenu/VBoxContainer"]
+margin_top = 35.0
+margin_right = 172.0
+margin_bottom = 66.0
+theme = ExtResource( 13 )
+text = "Return to Menu"
 
 [node name="beepdamaged" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
@@ -293,3 +300,4 @@ stream = ExtResource( 16 )
 
 [connection signal="timeout" from="GUN/cooldowntimer" to="GUN" method="_on_cooldowntimer_timeout"]
 [connection signal="button_down" from="UI/PauseMenu/VBoxContainer/RsuemButton" to="UI/PauseMenu" method="_on_RsuemButton_button_down"]
+[connection signal="pressed" from="UI/PauseMenu/VBoxContainer/menuButton" to="UI/PauseMenu" method="_on_menuButton_pressed"]

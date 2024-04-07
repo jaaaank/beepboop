@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Art/BigMode_FinalEscape1.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Audio/facexplosion.wav" type="AudioStream" id=2]
+[ext_resource path="res://Assets/Audio/explosion.wav" type="AudioStream" id=3]
+[ext_resource path="res://Assets/changetexts.tres" type="Theme" id=4]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Button
+
+
+func _on_Button_pressed():
+	get_tree().change_scene(\"res://src/Scenes/CoreBossLevelFinale.tscn\")
+"
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+stretch_mode = 1
+
+[node name="Label2" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -482.0
+margin_top = -133.0
+margin_right = 163.0
+margin_bottom = -13.0
+rect_scale = Vector2( 1.5, 1.5 )
+theme = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Beep Boop destroyed the factory...
+But at what cost...
+This game is called Beep Boop's ESCAPE!
+Try Again!!!"
+text = "Beep Boop destroyed the factory...
+But at what cost...
+This game is called Beep Boop's ESCAPE!
+Try Again!!!"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -5.0
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = 5.0
+pitch_scale = 0.5
+autoplay = true
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -86.0
+margin_top = 73.0
+margin_right = 86.0
+margin_bottom = 104.0
+theme = ExtResource( 4 )
+text = "Try Again"
+script = SubResource( 1 )
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]

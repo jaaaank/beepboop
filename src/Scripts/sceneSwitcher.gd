@@ -7,8 +7,8 @@ func _ready():
 	set_physics_process(false)
 	
 func _physics_process(delta):
-	$CanvasLayer/ColorRect.color.a += .75 * delta
-	if $CanvasLayer/ColorRect.color.a >= 2:
+	$CanvasLayer/ColorRect.color.a += .55 * delta
+	if $CanvasLayer/ColorRect.color.a >= 1:
 			get_tree().change_scene("res://src/Scenes/LevelSelect.tscn")
 			Autoload.levelsUnlocked[levelToUnlock] = true
 	

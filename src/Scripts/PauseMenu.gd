@@ -16,3 +16,7 @@ func set_paused(value: bool) -> void:
 
 func _on_RsuemButton_button_down():
 	set_paused(!paused)
+
+
+func _on_menuButton_pressed():
+	get_tree().change_scene("res://src/Scenes/TitleScreen.tscn")
